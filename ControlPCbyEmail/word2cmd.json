@@ -1,0 +1,6 @@
+{
+	"关机": "shutdown -s -t 00",
+	"取消关机": "shutdown -a",
+	"锁屏": "rundll32.exe user32.dll,LockWorkStation",
+	"截屏": "screenshot"
+}
