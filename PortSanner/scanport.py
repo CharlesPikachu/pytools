@@ -50,7 +50,7 @@ class scanThread(threading.Thread):
 
 
 if __name__ == '__main__':
-	ip = input('Input IP(example <123.207.35.36>):\n')
+	ip = input('Input IP(example <xxx.xxx.xxx.xxx>):\n')
 	port_min = input('Input Min Port(0 by default):\n')
 	try:
 		port_min = int(port_min)
