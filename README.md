@@ -10,7 +10,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 - [Introduction](https://mp.weixin.qq.com/s/VlwCyD99YBYhIbwG4rYN3A)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/MovieHelper)
 ### Port Scanner
-- [Introduction]()
+- [Introduction](https://mp.weixin.qq.com/s/98VnIO9JEdAqcIPdxq1cOg)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/PortSanner)
 
 # More:
