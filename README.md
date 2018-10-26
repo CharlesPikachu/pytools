@@ -13,7 +13,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 - [Introduction](https://mp.weixin.qq.com/s/98VnIO9JEdAqcIPdxq1cOg)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/PortSanner)
 
-# More:
-## WeChat Official Accounts:
+# More
+## WeChat Official Accounts
 Charles_pikachu  
 ![img](pikachu.jpg)
