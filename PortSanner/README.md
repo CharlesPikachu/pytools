@@ -1,8 +1,11 @@
-# Introduction:
+# Introduction
 https://mp.weixin.qq.com/s/98VnIO9JEdAqcIPdxq1cOg
 
-# Version:
-V1.0
+# Version
+- V1.0
 
-# Usage:
+# Usage
+#### step1
+```sh
 run "python scanport.py"
+```
