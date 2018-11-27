@@ -3,6 +3,7 @@ Function:
 	翻译软件,支持:
 		-百度翻译
 		-有道翻译
+		-谷歌翻译
 作者:
 	Charles
 公众号:
@@ -53,7 +54,7 @@ class baidu():
 		return token, gtk
 	def getSign(self, gtk, word):
 		evaljs = js2py.EvalJs()
-		js_code = js.js_code
+		js_code = js.bd_js_code
 		js_code = js_code.replace('null !== i ? i : (i = window[l] || "") || ""', gtk)
 		evaljs.execute(js_code)
 		sign = evaljs.e(word)
@@ -91,12 +92,45 @@ class youdao():
 
 '''
 Function:
+	Google翻译类
+'''
+class google():
+	def __init__(self):
+		self.headers = {
+						'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+					}
+		self.url = 'https://translate.google.cn/translate_a/single?client=t&sl=auto&tl={}&hl=zh-CN&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&tk={}&q={}'
+	def translate(self, word):
+		if len(word) > 4891:
+			raise RuntimeError('The length of word should be less than 4891...')
+		languages = ['zh-CN', 'en']
+		if not self.isChinese(word):
+			target_language = languages[0]
+		else:
+			target_language = languages[1]
+		res = requests.get(self.url.format(target_language, self.getTk(word), word), headers=self.headers)
+		return [res.json()[0][0][0]]
+	def getTk(self, word):
+		evaljs = js2py.EvalJs()
+		js_code = js.gg_js_code
+		evaljs.execute(js_code)
+		tk = evaljs.TL(word)
+		return tk
+	def isChinese(self, word):
+		for w in word:
+			if '\u4e00' <= w <= '\u9fa5':
+				return True
+		return False
+
+
+'''
+Function:
 	简单的Demo
 '''
 class Demo(QWidget):
 	def __init__(self, parent=None):
 		super().__init__()
-		self.setWindowTitle('翻译软件')
+		self.setWindowTitle('翻译软件-公众号: Charles的皮卡丘')
 		self.Label1 = QLabel('原文')
 		self.Label2 = QLabel('译文')
 		self.LineEdit1 = QLineEdit()
@@ -106,6 +140,7 @@ class Demo(QWidget):
 		self.translateButton3 = QPushButton()
 		self.translateButton1.setText('百度翻译')
 		self.translateButton2.setText('有道翻译')
+		self.translateButton3.setText('谷歌翻译')
 		self.grid = QGridLayout()
 		self.grid.setSpacing(12)
 		self.grid.addWidget(self.Label1, 1, 0)
@@ -114,12 +149,15 @@ class Demo(QWidget):
 		self.grid.addWidget(self.LineEdit2, 2, 1)
 		self.grid.addWidget(self.translateButton1, 1, 2)
 		self.grid.addWidget(self.translateButton2, 2, 2)
+		self.grid.addWidget(self.translateButton3, 3, 2)
 		self.setLayout(self.grid)
 		self.resize(400, 150)
 		self.translateButton1.clicked.connect(lambda : self.translate(api='baidu'))
 		self.translateButton2.clicked.connect(lambda : self.translate(api='youdao'))
+		self.translateButton3.clicked.connect(lambda : self.translate(api='google'))
 		self.bd_translate = baidu()
 		self.yd_translate = youdao()
+		self.gg_translate = google()
 	def translate(self, api='baidu'):
 		word = self.LineEdit1.text()
 		if not word:
@@ -128,8 +166,10 @@ class Demo(QWidget):
 			results = self.bd_translate.translate(word)
 		elif api == 'youdao':
 			results = self.yd_translate.translate(word)
+		elif api == 'google':
+			results = self.gg_translate.translate(word)
 		else:
-			raise RuntimeError('api should be <baidu> or <youdao>...')
+			raise RuntimeError('Api should be <baidu> or <youdao> or <google>...')
 		for result in results:
 			self.LineEdit2.setText(result)
 
