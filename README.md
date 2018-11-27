@@ -17,6 +17,9 @@ You can star this repository to keep track of the project if it's helpful for yo
 #### Timer
 - [Introduction](https://mp.weixin.qq.com/s/8HcXQjcsyegYzp_yt1cE5w)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/Timer)
+#### Translator
+- [Introduction]()
+- [Code](https://github.com/CharlesPikachu/Tools/tree/master/Translator)
 
 # More
 #### WeChat Official Accounts
