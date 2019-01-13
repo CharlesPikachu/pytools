@@ -20,6 +20,9 @@ You can star this repository to keep track of the project if it's helpful for yo
 #### Translator
 - [Introduction](https://mp.weixin.qq.com/s/SWR-bUdqfpn3NxR5OgCYlg)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/Translator)
+#### emailSecurity
+- [Introduction](https://mp.weixin.qq.com/s/9u1CIa8MdoiXGGdPqae8fA)
+- [Code](https://github.com/CharlesPikachu/Tools/tree/master/emailSecurity)
 
 # More
 #### WeChat Official Accounts
