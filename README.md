@@ -26,6 +26,9 @@ You can star this repository to keep track of the project if it's helpful for yo
 #### Calculator
 - [Introduction](https://mp.weixin.qq.com/s/x6ygDEWHiYX10AP4y8e3MA)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/Calculator)
+#### ipLocQuery
+- [Introduction](https://mp.weixin.qq.com/s/lYWxt00erojeSoyRWA1R5g)
+- [Code](https://github.com/CharlesPikachu/Tools/tree/master/ipLocQuery)
 
 # More
 #### WeChat Official Accounts

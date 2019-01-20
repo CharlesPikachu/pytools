@@ -84,7 +84,7 @@ def checkHaveibeenpwned(emails):
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description="Used to verify the security of your email addresses.")
-	parser.add_argument('-f', dest='filename', help='File to be checked with one email addresses per line')
+	parser.add_argument('-f', dest='filename', help='File to be checked with one email address per line')
 	parser.add_argument('-e', dest='email', help='Single email address to be checked')
 	args = parser.parse_args()
 	email = args.email
