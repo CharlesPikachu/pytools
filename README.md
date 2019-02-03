@@ -29,6 +29,9 @@ You can star this repository to keep track of the project if it's helpful for yo
 #### ipLocQuery
 - [Introduction](https://mp.weixin.qq.com/s/lYWxt00erojeSoyRWA1R5g)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/ipLocQuery)
+#### Clock
+- [Introduction](https://mp.weixin.qq.com/s/8JPxEHGZ2u7dsEUJS-9WbQ)
+- [Code](https://github.com/CharlesPikachu/Tools/tree/master/Clock)
 
 # More
 #### WeChat Official Accounts
