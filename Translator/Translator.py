@@ -170,8 +170,7 @@ class Demo(QWidget):
 			results = self.gg_translate.translate(word)
 		else:
 			raise RuntimeError('Api should be <baidu> or <youdao> or <google>...')
-		for result in results:
-			self.LineEdit2.setText(result)
+		self.LineEdit2.setText(';'.join(results))
 
 
 if __name__ == '__main__':
