@@ -32,6 +32,9 @@ You can star this repository to keep track of the project if it's helpful for yo
 #### Clock
 - [Introduction](https://mp.weixin.qq.com/s/8JPxEHGZ2u7dsEUJS-9WbQ)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/Clock)
+#### inquiryExpress
+- [Introduction](https://mp.weixin.qq.com/s/haNR8Yr9RsSXaTd0jl5PFA)
+- [Code](https://github.com/CharlesPikachu/Tools/tree/master/inquiryExpress)
 
 # More
 #### WeChat Official Accounts
