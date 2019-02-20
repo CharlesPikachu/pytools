@@ -35,6 +35,9 @@ You can star this repository to keep track of the project if it's helpful for yo
 #### inquiryExpress
 - [Introduction](https://mp.weixin.qq.com/s/haNR8Yr9RsSXaTd0jl5PFA)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/inquiryExpress)
+#### makeQrcode
+- [Introduction](https://mp.weixin.qq.com/s/XFmumQbQP4d9qf6HQBLVnA)
+- [Code](https://github.com/CharlesPikachu/Tools/tree/master/makeQrcode)
 
 # More
 #### WeChat Official Accounts
