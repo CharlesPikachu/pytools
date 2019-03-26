@@ -38,6 +38,9 @@ You can star this repository to keep track of the project if it's helpful for yo
 #### makeQrcode
 - [Introduction](https://mp.weixin.qq.com/s/XFmumQbQP4d9qf6HQBLVnA)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/makeQrcode)
+#### MusicPlayer
+- [Introduction](https://mp.weixin.qq.com/s/SUyRNz_M7B6bcdV7-YxlZQ)
+- [Code](https://github.com/CharlesPikachu/Tools/tree/master/MusicPlayer)
 
 # More
 #### WeChat Official Accounts
