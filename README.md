@@ -41,6 +41,9 @@ You can star this repository to keep track of the project if it's helpful for yo
 #### MusicPlayer
 - [Introduction](https://mp.weixin.qq.com/s/SUyRNz_M7B6bcdV7-YxlZQ)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/MusicPlayer)
+#### luxunSentencesQuery
+- [Introduction](https://mp.weixin.qq.com/s/dQ8NfwFDoZw-6c1SPEl0aw)
+- [Code](https://github.com/CharlesPikachu/Tools/tree/master/luxunSentencesQuery)
 
 # More
 #### WeChat Official Accounts
