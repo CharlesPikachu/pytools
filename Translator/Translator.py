@@ -1,9 +1,9 @@
 '''
 Function:
-	翻译软件,支持:
-		-百度翻译
-		-有道翻译
-		-谷歌翻译
+	翻译软件V0.1.1,支持:
+		--百度翻译
+		--有道翻译
+		--谷歌翻译
 作者:
 	Charles
 公众号:
@@ -17,6 +17,7 @@ import js2py
 import random
 import hashlib
 import requests
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QWidget, QApplication, QGridLayout, QLabel, QLineEdit, QPushButton
 
 
@@ -74,20 +75,34 @@ class youdao():
 					}
 		self.data = {
 						'i': None,
+						'from': 'AUTO',
+						'to': 'AUTO',
+						'smartresult': 'dict',
 						'client': 'fanyideskweb',
-						'keyfrom': 'fanyi.web',
 						'salt': None,
-						'sign': None
+						'sign': None,
+						'ts': None,
+						'bv': None,
+						'doctype': 'json',
+						'version': '2.1',
+						'keyfrom': 'fanyi.web',
+						'action': 'FY_BY_REALTlME'
 					}
 		self.url = 'http://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule'
 	def translate(self, word):
-		t = str(time.time()*1000 + random.randint(1, 10))
+		ts = str(int(time.time()*10000))
+		salt = str(int(time.time()*10000) + random.random()*10 + 10)
+		sign = 'fanyideskweb' + word + salt + '97_3(jkMYg@T[KZQmqjTK'
+		sign = hashlib.md5(sign.encode('utf-8')).hexdigest()
+		bv = '5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'
+		bv = hashlib.md5(bv.encode('utf-8')).hexdigest()
 		self.data['i'] = word
-		self.data['salt'] = t
-		sign = 'fanyideskweb' + word + t + '6x(ZHw]mwzX#u0V7@yfwK'
-		self.data['sign'] = hashlib.md5(sign.encode('utf-8')).hexdigest()
+		self.data['salt'] = salt
+		self.data['sign'] = sign
+		self.data['ts'] = ts
+		self.data['bv'] = bv
 		res = requests.post(self.url, headers=self.headers, data=self.data)
-		return res.json()['translateResult']
+		return [res.json()['translateResult'][0][0].get('tgt')]
 
 
 '''
@@ -131,6 +146,7 @@ class Demo(QWidget):
 	def __init__(self, parent=None):
 		super().__init__()
 		self.setWindowTitle('翻译软件-公众号: Charles的皮卡丘')
+		self.setWindowIcon(QIcon('data/icon.jpg'))
 		self.Label1 = QLabel('原文')
 		self.Label2 = QLabel('译文')
 		self.LineEdit1 = QLineEdit()
