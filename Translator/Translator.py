@@ -91,7 +91,7 @@ class youdao():
 		self.url = 'http://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule'
 	def translate(self, word):
 		ts = str(int(time.time()*10000))
-		salt = str(int(time.time()*10000) + random.random()*10 + 10)
+		salt = ts + str(int(random.random()*10))
 		sign = 'fanyideskweb' + word + salt + '97_3(jkMYg@T[KZQmqjTK'
 		sign = hashlib.md5(sign.encode('utf-8')).hexdigest()
 		bv = '5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'
