@@ -44,6 +44,9 @@ You can star this repository to keep track of the project if it's helpful for yo
 #### luxunSentencesQuery
 - [Introduction](https://mp.weixin.qq.com/s/dQ8NfwFDoZw-6c1SPEl0aw)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/luxunSentencesQuery)
+#### earthWallpaper
+- [Introduction](https://mp.weixin.qq.com/s/pDZpzzpd1g5bodtFdEROEg)
+- [Code](https://github.com/CharlesPikachu/Tools/tree/master/earthWallpaper)
 
 # More
 #### WeChat Official Accounts
