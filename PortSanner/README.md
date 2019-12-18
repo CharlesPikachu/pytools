@@ -5,7 +5,7 @@ https://mp.weixin.qq.com/s/98VnIO9JEdAqcIPdxq1cOg
 - V1.0
 
 # Usage
-#### step1
-```sh
-run "python scanport.py"
+```
+run as following command:
+python scanport.py
 ```

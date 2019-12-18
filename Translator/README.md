@@ -10,12 +10,9 @@ https://mp.weixin.qq.com/s/TUcHdNQ7IkFYvaaY4-447Q
 - [google](https://translate.google.cn/)
 
 # Usage
-#### Step1
-```sh
-install the dependencies:
-pip install -r requirements.txt
 ```
-#### Step2
-```sh
+Step1:
+install the dependencies(pip install -r requirements.txt)
+Step2:
 run "python Translator.py"
 ```

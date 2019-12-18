@@ -5,12 +5,9 @@ https://mp.weixin.qq.com/s/8HcXQjcsyegYzp_yt1cE5w
 - V1.0
 
 # Usage
-#### Step1
-```sh
-install the dependencies:
-pip install -r requirements.txt
 ```
-#### Step2
-```sh
+Step1:
+install the dependencies(pip install -r requirements.txt)
+Step2:
 run "python Timer.py"
 ```
