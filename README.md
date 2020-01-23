@@ -48,7 +48,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 - [Introduction](https://mp.weixin.qq.com/s/pDZpzzpd1g5bodtFdEROEg)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/earthWallpaper)
 #### Runcat
-- [Introduction]()
+- [Introduction](https://mp.weixin.qq.com/s/8Fgzb8JiAoNSJqUanSi85Q)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/Runcat)
 
 # More
