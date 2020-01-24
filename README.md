@@ -51,7 +51,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 - [Introduction](https://mp.weixin.qq.com/s/8Fgzb8JiAoNSJqUanSi85Q)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/Runcat)
 #### NewYearCard
-- [Introduction]()
+- [Introduction](https://mp.weixin.qq.com/s/XCPkiXrKGZrVpNvyRlzgvA)
 - [Code](https://github.com/CharlesPikachu/Tools/tree/master/NewYearCard)
 
 # More
