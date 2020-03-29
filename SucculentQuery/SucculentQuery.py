@@ -24,7 +24,7 @@ from PyQt5 import QtWidgets, QtGui
 class SucculentQuery(QWidget):
     def __init__(self, parent=None, **kwargs):
         super(SucculentQuery, self).__init__(parent)
-        self.setWindowTitle('鲁迅名言查询-微信公众号:Charles的皮卡丘')
+        self.setWindowTitle('多肉数据查询系统-微信公众号:Charles的皮卡丘')
         self.setWindowIcon(QIcon('resources/icon/icon.png'))
         # 定义组件
         self.label_name = QLabel('多肉名称: ')
