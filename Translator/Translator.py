@@ -1,6 +1,6 @@
 '''
 Function:
-	翻译软件V0.1.1,支持:
+	翻译软件V0.1.2,支持:
 		--百度翻译
 		--有道翻译
 		--谷歌翻译
@@ -17,14 +17,11 @@ import js2py
 import random
 import hashlib
 import requests
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QWidget, QApplication, QGridLayout, QLabel, QLineEdit, QPushButton
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
 
-'''
-Function:
-	百度翻译类
-'''
+'''百度翻译类'''
 class baidu():
 	def __init__(self):
 		self.session = requests.Session()
@@ -34,13 +31,20 @@ class baidu():
 							'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36'
 						}
 		self.data = {
+						'from': '',
+						'to': '',
 						'query': '',
+						'transtype': 'translang',
 						'simple_means_flag': '3',
 						'sign': '',
 						'token': '',
+						'domain': 'common'
 					}
 		self.url = 'https://fanyi.baidu.com/v2transapi'
+		self.langdetect_url = 'https://fanyi.baidu.com/langdetect'
 	def translate(self, word):
+		self.data['from'] = self.detectLanguage(word)
+		self.data['to'] = 'en' if self.data['from'] == 'zh' else 'zh'
 		self.data['query'] = word
 		self.data['token'], gtk = self.getTokenGtk()
 		self.data['token'] = '6482f137ca44f07742b2677f5ffd39e1'
@@ -60,12 +64,15 @@ class baidu():
 		evaljs.execute(js_code)
 		sign = evaljs.e(word)
 		return sign
+	def detectLanguage(self, word):
+		data = {
+				'query': word
+				}
+		res = self.session.post(self.langdetect_url, headers=self.headers, data=data)
+		return res.json()['lan']
 
 
-'''
-Function:
-	有道翻译类
-'''
+'''有道翻译类'''
 class youdao():
 	def __init__(self):
 		self.headers = {
@@ -105,10 +112,7 @@ class youdao():
 		return [res.json()['translateResult'][0][0].get('tgt')]
 
 
-'''
-Function:
-	Google翻译类
-'''
+'''Google翻译类'''
 class google():
 	def __init__(self):
 		self.headers = {
@@ -138,13 +142,10 @@ class google():
 		return False
 
 
-'''
-Function:
-	简单的Demo
-'''
-class Demo(QWidget):
-	def __init__(self, parent=None):
-		super().__init__()
+'''简单的Demo'''
+class Translator(QWidget):
+	def __init__(self, parent=None, **kwargs):
+		super(Translator, self).__init__(parent)
 		self.setWindowTitle('翻译软件-公众号: Charles的皮卡丘')
 		self.setWindowIcon(QIcon('data/icon.jpg'))
 		self.Label1 = QLabel('原文')
@@ -189,8 +190,9 @@ class Demo(QWidget):
 		self.LineEdit2.setText(';'.join(results))
 
 
+'''run'''
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
-	demo = Demo()
+	demo = Translator()
 	demo.show()
 	sys.exit(app.exec_())

@@ -2,7 +2,7 @@
 https://mp.weixin.qq.com/s/TUcHdNQ7IkFYvaaY4-447Q
 
 # Version
-- V0.1.1
+- V0.1.2
 
 # Support
 - [baidu](https://fanyi.baidu.com/)
