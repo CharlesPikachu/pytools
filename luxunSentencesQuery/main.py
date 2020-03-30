@@ -43,7 +43,7 @@ class GUI(QWidget):
 		self.grid.addWidget(self.text, 2, 1, 1, 40)
 		self.grid.addWidget(self.cmb, 1, 40)
 		self.setLayout(self.grid)
-		self.resize(200, 400)
+		self.resize(600, 400)
 		self.button.clicked.connect(self.inquiry)
 		self.paragraphs = self.loadData('data/book.txt')
 	'''查询'''

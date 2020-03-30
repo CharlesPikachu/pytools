@@ -59,7 +59,7 @@ class Demo(QWidget):
 		self.grid.addWidget(self.label2, 2, 0)
 		self.grid.addWidget(self.text, 2, 1, 1, 40)
 		self.setLayout(self.grid)
-		self.resize(200, 400)
+		self.resize(600, 400)
 		self.button.clicked.connect(self.inquiry)
 	def inquiry(self):
 		number = self.line_edit.text()
@@ -72,6 +72,7 @@ class Demo(QWidget):
 		self.text.setText('\n\n\n'.join(infos)[:-1])
 
 
+'''run'''
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
 	demo = Demo()
