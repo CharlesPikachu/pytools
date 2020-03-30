@@ -25,7 +25,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   NewYearCard                        |     [click](https://mp.weixin.qq.com/s/XCPkiXrKGZrVpNvyRlzgvA)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/NewYearCard)          |     新年贺卡生成器          |
 |   NaughtyConfession                  |     [click](https://mp.weixin.qq.com/s/wMxMrx07ZeOfYEXpuGYVsg)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/NaughtyConfession)    |     仿抖音表白小软件        |
 |   SucculentQuery                     |     [click](https://mp.weixin.qq.com/s/1_PzYVkMXwXrCiHBP5nZtQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/SucculentQuery)       |     多肉数据查询系统        | 
-|   HubbleSee                          |     [click]()                                                     |      [click](https://github.com/CharlesPikachu/Tools/tree/master/HubbleSee)            |     你生日那天的宇宙        |
+|   HubbleSee                          |     [click](https://mp.weixin.qq.com/s/hJDcRHNHT1Zc0akctvWqsA)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/HubbleSee)            |     你生日那天的宇宙        |
 
 
 # More
