@@ -26,6 +26,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   NaughtyConfession                  |     [click](https://mp.weixin.qq.com/s/wMxMrx07ZeOfYEXpuGYVsg)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/NaughtyConfession)    |     仿抖音表白小软件        |
 |   SucculentQuery                     |     [click](https://mp.weixin.qq.com/s/1_PzYVkMXwXrCiHBP5nZtQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/SucculentQuery)       |     多肉数据查询系统        | 
 |   HubbleSee                          |     [click](https://mp.weixin.qq.com/s/hJDcRHNHT1Zc0akctvWqsA)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/HubbleSee)            |     你生日那天的宇宙        |
+|   DesktopPet                         |     [click]()                                                     |      [click](https://github.com/CharlesPikachu/Tools/tree/master/DesktopPet)           |     桌面宠物                |
 
 
 # More

@@ -2,7 +2,7 @@
 https://mp.weixin.qq.com/s/lYWxt00erojeSoyRWA1R5g
 
 # Version
-- V1.0
+- v1.0
 
 # Usage
 ```
