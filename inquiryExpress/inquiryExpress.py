@@ -9,9 +9,10 @@ Author:
 import sys
 import pickle
 import requests
-from PyQt5.QtWidgets import QWidget, QApplication, QGridLayout, QLabel, QLineEdit, QPushButton, QTextEdit
+from PyQt5.QtWidgets import *
 
 
+'''导入所有快递公司信息'''
 companies = pickle.load(open('companies.pkl', 'rb'))
 
 
@@ -23,11 +24,15 @@ def py2hz(py):
 '''利用快递100查询快递'''
 def getExpressInfo(number):
 	url = 'http://www.kuaidi100.com/autonumber/autoComNum?resultv2=1&text=%s' % number
+	headers = {
+				'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36',
+				'Host': 'www.kuaidi100.com'
+			}
 	infos = []
-	for each in requests.get(url).json()['auto']:
+	for each in requests.get(url, headers=headers).json()['auto']:
 		company_name = each['comCode']
 		url = 'http://www.kuaidi100.com/query?type=%s&postid=%s' % (company_name, number)
-		temps = requests.get(url).json()['data']
+		temps = requests.get(url, headers=headers).json()['data']
 		info = '公司: %s\n' % py2hz(company_name)
 		for idx, each in enumerate(temps):
 			if idx == 0:
@@ -40,11 +45,11 @@ def getExpressInfo(number):
 	return infos
 
 
-'''实现简单的Demo'''
-class Demo(QWidget):
+'''制作简单的GUI'''
+class ExpressGUI(QWidget):
 	def __init__(self, parent=None):
-		super().__init__()
-		self.setWindowTitle('快递查询系统-微信公众号:Charles的皮卡丘')
+		super(ExpressGUI, self).__init__(parent)
+		self.setWindowTitle('快递查询系统 —— 微信公众号:Charles的皮卡丘')
 		self.label1 = QLabel('快递单号:')
 		self.line_edit = QLineEdit()
 		self.label2 = QLabel('查询结果:')
@@ -75,6 +80,6 @@ class Demo(QWidget):
 '''run'''
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
-	demo = Demo()
-	demo.show()
+	gui = ExpressGUI()
+	gui.show()
 	sys.exit(app.exec_())
