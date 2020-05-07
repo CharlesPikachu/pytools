@@ -28,7 +28,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   SucculentQuery                     |     [click](https://mp.weixin.qq.com/s/1_PzYVkMXwXrCiHBP5nZtQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/SucculentQuery)       |     多肉数据查询系统        | 
 |   HubbleSee                          |     [click](https://mp.weixin.qq.com/s/hJDcRHNHT1Zc0akctvWqsA)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/HubbleSee)            |     你生日那天的宇宙        |
 |   DesktopPet                         |     [click](https://mp.weixin.qq.com/s/4kOzdRXmrxzR88QcYYSFvQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/DesktopPet)           |     桌面宠物                |
-|   ArtSignGenerator                   |     [click]()                                                     |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ArtSignGenerator)     |     艺术签名生成器          |   
+|   ArtSignGenerator                   |     [click](https://mp.weixin.qq.com/s/CYxAgJZdEc87XIRcqWgRqw)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ArtSignGenerator)     |     艺术签名生成器          |   
 
 
 # More
