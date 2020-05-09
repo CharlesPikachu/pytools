@@ -29,7 +29,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   HubbleSee                          |     [click](https://mp.weixin.qq.com/s/hJDcRHNHT1Zc0akctvWqsA)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/HubbleSee)            |     你生日那天的宇宙        |
 |   DesktopPet                         |     [click](https://mp.weixin.qq.com/s/4kOzdRXmrxzR88QcYYSFvQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/DesktopPet)           |     桌面宠物                |
 |   ArtSignGenerator                   |     [click](https://mp.weixin.qq.com/s/CYxAgJZdEc87XIRcqWgRqw)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ArtSignGenerator)     |     艺术签名生成器          | 
-|   ComputerSinger                     |     [click]()                                                     |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ComputerSinger)       |     电脑蜂鸣器哼歌          | 
+|   ComputerSinger                     |     [click](https://mp.weixin.qq.com/s/-yT1NxAUTN8hzZs76qzqjQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ComputerSinger)       |     电脑蜂鸣器哼歌          | 
 
 
 # More
