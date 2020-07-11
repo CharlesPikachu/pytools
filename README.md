@@ -31,7 +31,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   ArtSignGenerator                   |     [click](https://mp.weixin.qq.com/s/CYxAgJZdEc87XIRcqWgRqw)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ArtSignGenerator)     |     艺术签名生成器          | 
 |   ComputerSinger                     |     [click](https://mp.weixin.qq.com/s/-yT1NxAUTN8hzZs76qzqjQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ComputerSinger)       |     电脑蜂鸣器哼歌          |
 |   GenderPredictor                    |     [click](https://mp.weixin.qq.com/s/NS3DfRpIfw5wFsV3EaqEzQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/GenderPredictor)      |     姓名猜测性别            |
-|   IdiomSolitaire                     |     [click]()                                                     |      [click](https://github.com/CharlesPikachu/Tools/tree/master/IdiomSolitaire)       |     成语接龙                |
+|   IdiomSolitaire                     |     [click](https://mp.weixin.qq.com/s/ncgl2OBUZsE77gOy1gclYg)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/IdiomSolitaire)       |     成语接龙                |
 
 
 # More
