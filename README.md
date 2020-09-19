@@ -33,7 +33,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   GenderPredictor                    |     [click](https://mp.weixin.qq.com/s/NS3DfRpIfw5wFsV3EaqEzQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/GenderPredictor)      |     姓名猜测性别            |
 |   IdiomSolitaire                     |     [click](https://mp.weixin.qq.com/s/ncgl2OBUZsE77gOy1gclYg)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/IdiomSolitaire)       |     成语接龙                |
 |   TrumpTweetsGenerator               |     [click](https://mp.weixin.qq.com/s/KO_nWpejIqQNKZgbCBfWEQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/TrumpTweetsGenerator) |     特朗普推特生成器        |
-
+|   idcardquery                        |     [click]()    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/idcardquery)          |     身份证信息查询          |
 
 # More
 #### WeChat Official Accounts
