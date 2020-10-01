@@ -1,6 +1,7 @@
 # Tools
 ```
 Some useful tools written in python.  
+These tools help you in your daily life and can make your potato pc a far better pc..
 You can star this repository to keep track of the project if it's helpful for you, thank you for your support.
 ```
 
