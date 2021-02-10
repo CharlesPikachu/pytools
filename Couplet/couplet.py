@@ -78,7 +78,7 @@ class CoupletGenerator(QWidget):
             center = response_json['couplets']['center']
             first = response_json['couplets']['first']
             second = response_json['couplets']['second']
-            text = f'横批: {center}\n上联: {first}\n下联: {first}'
+            text = f'横批: {center}\n上联: {first}\n下联: {second}'
             all_couplets.append(text)
         self.text_couple.setText('\n\n\n'.join(all_couplets))
     '''获取token'''
