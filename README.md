@@ -35,6 +35,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   TrumpTweetsGenerator               |     [click](https://mp.weixin.qq.com/s/KO_nWpejIqQNKZgbCBfWEQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/TrumpTweetsGenerator) |     特朗普推特生成器        |
 |   idcardquery                        |     [click](https://mp.weixin.qq.com/s/2zljIGm-5WlRCq68ADXSiw)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/idcardquery)          |     身份证信息查询          |
 |   VideoPlayer                        |     [click](https://mp.weixin.qq.com/s/pG6SwhfNSWZuHxuMcEQZog)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/VideoPlayer)          |     视频播放器              |
+|   Couplet                            |     [click](https://mp.weixin.qq.com/s/L1gmiMJ-M8T-QgSeJckYEw)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/Couplet)              |     对联生成器              |
 
 # More
 #### WeChat Official Accounts
