@@ -1,5 +1,5 @@
 '''title'''
-__title__ = 'pytools'
+__title__ = 'pikachupytools'
 '''description'''
 __description__ = 'Pytools: Some useful tools written by pure python.'
 '''url'''

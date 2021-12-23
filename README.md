@@ -75,7 +75,7 @@ run "pip install git+https://github.com/CharlesPikachu/pytools.git@master"
 # Quick Start
 ```python
 import random
-from pytools import pytools
+from pikachupytools import pytools
 
 tool_client = pytools.pytools()
 all_supports = tool_client.getallsupported()
