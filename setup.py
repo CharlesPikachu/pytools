@@ -20,6 +20,12 @@ with open('README.md', 'r', encoding='utf-8') as f:
 '''package data'''
 package_data = {}
 package_data.update({
+    'pytools.modules.musicplayer': ['resources/*'] 
+})
+package_data.update({
+    'pytools.modules.genderpredictor': ['resources/*'] 
+})
+package_data.update({
     'pytools.modules.artsigngenerator': ['resources/*'] 
 })
 package_data.update({

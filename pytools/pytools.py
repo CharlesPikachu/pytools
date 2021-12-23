@@ -39,7 +39,7 @@ class pytools():
     '''执行对应的小程序'''
     def execute(self, tool_type=None, config={}):
         assert tool_type in self.supported_tools, 'unsupport tool_type %s...' % tool_type
-        if tool_type in ['luxunsentencesquery', 'artsigngenerator']:
+        if tool_type in ['luxunsentencesquery', 'artsigngenerator', 'genderpredictor', 'musicplayer']:
             app = QApplication(sys.argv)
             client = self.supported_tools[tool_type](**config)
             client.show()
@@ -53,8 +53,10 @@ class pytools():
             'timer': Timer,
             'clock': Clock,
             'calculator': Calculator,
+            'musicplayer': MusicPlayer,
             'portscanner': PortScanner,
             'emailsecurity': EmailSecurity,
+            'genderpredictor': GenderPredictor,
             'artsigngenerator': ArtSignGenerator,
             'luxunsentencesquery': LuxunSentencesQuery,
         }
@@ -71,4 +73,4 @@ class pytools():
 if __name__ == '__main__':
     tool_client = pytools()
     print(tool_client.getallsupported())
-    tool_client.execute('artsigngenerator')
+    tool_client.execute('musicplayer')
