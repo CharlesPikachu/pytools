@@ -3,8 +3,8 @@
 </div>
 <br />
 
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pytools)](https://pypi.org/project/pytools/)
-[![PyPI](https://img.shields.io/pypi/v/pytools)](https://pypi.org/project/pytools)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pikachupytools)](https://pypi.org/project/pikachupytools/)
+[![PyPI](https://img.shields.io/pypi/v/pikachupytools)](https://pypi.org/project/pikachupytools)
 [![license](https://img.shields.io/github/license/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/blob/master/LICENSE)
 [![issue resolution](https://isitmaintained.com/badge/resolution/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/issues)
 [![open issues](https://isitmaintained.com/badge/open/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/issues)
