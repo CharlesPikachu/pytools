@@ -23,6 +23,9 @@ package_data.update({
     'pytools.modules.runcat': ['resources/*'] 
 })
 package_data.update({
+    'pytools.modules.translator': ['resources/*'] 
+})
+package_data.update({
     'pytools.modules.videoplayer': ['resources/*'] 
 })
 package_data.update({

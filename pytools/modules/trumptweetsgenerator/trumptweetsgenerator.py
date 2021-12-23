@@ -18,7 +18,7 @@ from PyQt5.QtWidgets import *
 
 
 '''有道翻译'''
-class youdao():
+class YoudaoTranslator():
     def __init__(self):
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
@@ -31,6 +31,7 @@ class youdao():
             'bv': None, 'doctype': 'json', 'version': '2.1', 'keyfrom': 'fanyi.web', 'action': 'FY_BY_REALTlME'
         }
         self.url = 'http://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule'
+    '''翻译'''
     def translate(self, word):
         lts = str(int(time.time() * 10000))
         salt = lts + str(int(random.random() * 10))
@@ -105,7 +106,7 @@ class TrumpTweetsGenerator(QWidget):
         return tweet
     '''翻译当前的推特'''
     def translate(self):
-        api = youdao()
+        api = YoudaoTranslator()
         tweet = self.text_result.toPlainText()
         translated_tweet = '翻译接口调用失败'
         if tweet:

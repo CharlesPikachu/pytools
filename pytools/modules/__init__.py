@@ -2,6 +2,7 @@
 from .timer import Timer
 from .clock import Clock
 from .runcat import RunCat
+from .translator import Translator
 from .calculator import Calculator
 from .videoplayer import VideoPlayer
 from .musicplayer import MusicPlayer
