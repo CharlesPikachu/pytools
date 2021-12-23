@@ -38,7 +38,7 @@ package_data.update({
     'pytools.modules.idiomsolitaire': ['resources/*'] 
 })
 package_data.update({
-    'pytools.modules.idiomsolitaire': ['resources/*'] 
+    'pytools.modules.iplocationquery': ['resources/*'] 
 })
 package_data.update({
     'pytools.modules.succulentquery': ['resources/icon.png', 'resources/succulents/AK/*'] 
