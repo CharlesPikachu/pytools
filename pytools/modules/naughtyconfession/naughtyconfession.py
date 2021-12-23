@@ -84,9 +84,9 @@ def showText(screen, text, position, fontpath, fontsize, fontcolor, is_bold=Fals
     screen.blit(text_render, position)
 
 
-'''调皮的告别软件'''
+'''仿抖音表白神器'''
 class NaughtyConfession():
-    tool_name = '调皮的告别软件'
+    tool_name = '仿抖音表白神器'
     def __init__(self, title='来自一位喜欢你的小哥哥', **kwargs):
         self.title = title
         self.cfg = Config()

@@ -3,6 +3,8 @@
 </div>
 <br />
 
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pytools)](https://pypi.org/project/pytools/)
+[![PyPI](https://img.shields.io/pypi/v/pytools)](https://pypi.org/project/pytools)
 [![license](https://img.shields.io/github/license/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/blob/master/LICENSE)
 [![issue resolution](https://isitmaintained.com/badge/resolution/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/issues)
 [![open issues](https://isitmaintained.com/badge/open/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/issues)
@@ -18,36 +20,67 @@ You can star this repository to keep track of the project if it's helpful for yo
 
 
 # Support List
+|   Name                               |     Introduction                                                  |      Code                                         |     In Chinese                    |
+|   :----:                             |     :----:                                                        |      :----:                                       |     :----:                        |
+|   portscanner                        |     [click](https://mp.weixin.qq.com/s/98VnIO9JEdAqcIPdxq1cOg)    |      [click](./pytools/portscanner)               |     简易端口扫描器                |
+|   timer                              |     [click](https://mp.weixin.qq.com/s/8HcXQjcsyegYzp_yt1cE5w)    |      [click](./pytools/timer)                     |     简易计时器                    |
+|   emailsecurity                      |     [click](https://mp.weixin.qq.com/s/9u1CIa8MdoiXGGdPqae8fA)    |      [click](./pytools/emailsecurity)             |     邮箱安全性验证工具            |
+|   calculator                         |     [click](https://mp.weixin.qq.com/s/x6ygDEWHiYX10AP4y8e3MA)    |      [click](./pytools/calculator)                |     简易计算器                    |
+|   iplocationquery                    |     [click](https://mp.weixin.qq.com/s/lYWxt00erojeSoyRWA1R5g)    |      [click](./pytools/iplocationquery)           |     根据IP地址查询地理信息小工具  |
+|   clock                              |     [click](https://mp.weixin.qq.com/s/8JPxEHGZ2u7dsEUJS-9WbQ)    |      [click](./pytools/clock)                     |     简易时钟                      |
+|   inquiryexpress                     |     [click](https://mp.weixin.qq.com/s/haNR8Yr9RsSXaTd0jl5PFA)    |      [click](./pytools/inquiryexpress)            |     快递查询系统                  |
+|   qrcodegenerator                    |     [click](https://mp.weixin.qq.com/s/XFmumQbQP4d9qf6HQBLVnA)    |      [click](./pytools/qrcodegenerator)           |     二维码生成器                  |
+|   musicplayer                        |     [click](https://mp.weixin.qq.com/s/SUyRNz_M7B6bcdV7-YxlZQ)    |      [click](./pytools/musicplayer)               |     音乐播放器                    |
+|   luxunsentencesquery                |     [click](https://mp.weixin.qq.com/s/dQ8NfwFDoZw-6c1SPEl0aw)    |      [click](./pytools/luxunsentencesquery)       |     鲁迅名言查询系统              |
+|   runcat                             |     [click](https://mp.weixin.qq.com/s/8Fgzb8JiAoNSJqUanSi85Q)    |      [click](./pytools/runcat)                    |     奔跑的猫                      |
+|   newyearcardgenerator               |     [click](https://mp.weixin.qq.com/s/XCPkiXrKGZrVpNvyRlzgvA)    |      [click](./pytools/newyearcardgenerator)      |     新年贺卡生成器                |
+|   naughtyconfession                  |     [click](https://mp.weixin.qq.com/s/wMxMrx07ZeOfYEXpuGYVsg)    |      [click](./pytools/naughtyconfession)         |     仿抖音表白神器                |
+|   succulentquery                     |     [click](https://mp.weixin.qq.com/s/1_PzYVkMXwXrCiHBP5nZtQ)    |      [click](./pytools/succulentquery)            |     多肉数据查询系统              | 
+|   artsigngenerator                   |     [click](https://mp.weixin.qq.com/s/CYxAgJZdEc87XIRcqWgRqw)    |      [click](./pytools/artsigngenerator)          |     艺术签名生成器                | 
+|   genderpredictor                    |     [click](https://mp.weixin.qq.com/s/NS3DfRpIfw5wFsV3EaqEzQ)    |      [click](./pytools/genderpredictor)           |     给定中文名的性别猜测器        |
+|   idiomsolitaire                     |     [click](https://mp.weixin.qq.com/s/ncgl2OBUZsE77gOy1gclYg)    |      [click](./pytools/idiomsolitaire)            |     成语接龙小软件                |
+|   trumptweetsgenerator               |     [click](https://mp.weixin.qq.com/s/KO_nWpejIqQNKZgbCBfWEQ)    |      [click](./pytools/trumptweetsgenerator)      |     特朗普推特生成器              |
+|   idcardquery                        |     [click](https://mp.weixin.qq.com/s/2zljIGm-5WlRCq68ADXSiw)    |      [click](./pytools/idcardquery)               |     身份证信息查询工具            |
+|   videoplayer                        |     [click](https://mp.weixin.qq.com/s/pG6SwhfNSWZuHxuMcEQZog)    |      [click](./pytools/videoplayer)               |     视频播放器                    |
+|   coupletgenerator                   |     [click](https://mp.weixin.qq.com/s/L1gmiMJ-M8T-QgSeJckYEw)    |      [click](./pytools/coupletgenerator)          |     春联生成器                    |
+
+
+# Coming Soon
 |   Name                               |     Introduction                                                  |      Code                                                                              |     In Chinese              |
 |   :----:                             |     :----:                                                        |      :----:                                                                            |     :----:                  |
 |   Control your computer by emails    |     [click](https://mp.weixin.qq.com/s/KnG-mncegaB35v5THAUJXQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ControlPCbyEmail)     |     邮件控制电脑            |
 |   Movie helper                       |     [click](https://mp.weixin.qq.com/s/VlwCyD99YBYhIbwG4rYN3A)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/MovieHelper)          |     电影小助手              |
-|   Port Scanner                       |     [click](https://mp.weixin.qq.com/s/98VnIO9JEdAqcIPdxq1cOg)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/PortSanner)           |     端口扫描器              |
-|   Timer                              |     [click](https://mp.weixin.qq.com/s/8HcXQjcsyegYzp_yt1cE5w)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/Timer)                |     计时器                  |
 |   Translator                         |     [click](https://mp.weixin.qq.com/s/SWR-bUdqfpn3NxR5OgCYlg)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/Translator)           |     翻译软件                |
-|   emailSecurity                      |     [click](https://mp.weixin.qq.com/s/9u1CIa8MdoiXGGdPqae8fA)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/emailSecurity)        |     邮箱安全性验证工具      |
-|   Calculator                         |     [click](https://mp.weixin.qq.com/s/x6ygDEWHiYX10AP4y8e3MA)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/Calculator)           |     计算器                  |
-|   ipLocQuery                         |     [click](https://mp.weixin.qq.com/s/lYWxt00erojeSoyRWA1R5g)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ipLocQuery)           |     根据IP获得地理位置信息  |
-|   Clock                              |     [click](https://mp.weixin.qq.com/s/8JPxEHGZ2u7dsEUJS-9WbQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/Clock)                |     简易时钟                |
-|   inquiryExpress                     |     [click](https://mp.weixin.qq.com/s/haNR8Yr9RsSXaTd0jl5PFA)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/inquiryExpress)       |     快递查询软件            |
-|   makeQrcode                         |     [click](https://mp.weixin.qq.com/s/XFmumQbQP4d9qf6HQBLVnA)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/makeQrcode)           |     二维码制作软件          |
-|   MusicPlayer                        |     [click](https://mp.weixin.qq.com/s/SUyRNz_M7B6bcdV7-YxlZQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/MusicPlayer)          |     音乐播放器              |
-|   luxunSentencesQuery                |     [click](https://mp.weixin.qq.com/s/dQ8NfwFDoZw-6c1SPEl0aw)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/luxunSentencesQuery)  |     鲁迅名言查询系统        |
-|   earthWallpaper                     |     [click](https://mp.weixin.qq.com/s/pDZpzzpd1g5bodtFdEROEg)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/earthWallpaper)       |     地球卫星壁纸            |
-|   Runcat                             |     [click](https://mp.weixin.qq.com/s/8Fgzb8JiAoNSJqUanSi85Q)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/Runcat)               |     仿MAC奔跑的猫           |
-|   NewYearCard                        |     [click](https://mp.weixin.qq.com/s/XCPkiXrKGZrVpNvyRlzgvA)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/NewYearCard)          |     新年贺卡生成器          |
-|   NaughtyConfession                  |     [click](https://mp.weixin.qq.com/s/wMxMrx07ZeOfYEXpuGYVsg)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/NaughtyConfession)    |     仿抖音表白小软件        |
-|   SucculentQuery                     |     [click](https://mp.weixin.qq.com/s/1_PzYVkMXwXrCiHBP5nZtQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/SucculentQuery)       |     多肉数据查询系统        | 
+|   ComputerSinger                     |     [click](https://mp.weixin.qq.com/s/-yT1NxAUTN8hzZs76qzqjQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ComputerSinger)       |     电脑蜂鸣器哼歌          |
 |   HubbleSee                          |     [click](https://mp.weixin.qq.com/s/hJDcRHNHT1Zc0akctvWqsA)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/HubbleSee)            |     你生日那天的宇宙        |
 |   DesktopPet                         |     [click](https://mp.weixin.qq.com/s/4kOzdRXmrxzR88QcYYSFvQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/DesktopPet)           |     桌面宠物                |
-|   ArtSignGenerator                   |     [click](https://mp.weixin.qq.com/s/CYxAgJZdEc87XIRcqWgRqw)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ArtSignGenerator)     |     艺术签名生成器          | 
-|   ComputerSinger                     |     [click](https://mp.weixin.qq.com/s/-yT1NxAUTN8hzZs76qzqjQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ComputerSinger)       |     电脑蜂鸣器哼歌          |
-|   GenderPredictor                    |     [click](https://mp.weixin.qq.com/s/NS3DfRpIfw5wFsV3EaqEzQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/GenderPredictor)      |     姓名猜测性别            |
-|   IdiomSolitaire                     |     [click](https://mp.weixin.qq.com/s/ncgl2OBUZsE77gOy1gclYg)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/IdiomSolitaire)       |     成语接龙                |
-|   TrumpTweetsGenerator               |     [click](https://mp.weixin.qq.com/s/KO_nWpejIqQNKZgbCBfWEQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/TrumpTweetsGenerator) |     特朗普推特生成器        |
-|   idcardquery                        |     [click](https://mp.weixin.qq.com/s/2zljIGm-5WlRCq68ADXSiw)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/idcardquery)          |     身份证信息查询          |
-|   VideoPlayer                        |     [click](https://mp.weixin.qq.com/s/pG6SwhfNSWZuHxuMcEQZog)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/VideoPlayer)          |     视频播放器              |
-|   Couplet                            |     [click](https://mp.weixin.qq.com/s/L1gmiMJ-M8T-QgSeJckYEw)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/Couplet)              |     春联生成器              |
+|   earthWallpaper                     |     [click](https://mp.weixin.qq.com/s/pDZpzzpd1g5bodtFdEROEg)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/earthWallpaper)       |     地球卫星壁纸            |
+
+
+# Install
+#### Pip install
+```
+run "pip install pytools"
+```
+#### Source code install
+```sh
+(1) Offline
+Step1: git clone https://github.com/CharlesPikachu/pytools.git
+Step2: cd pytools -> run "python setup.py install"
+(2) Online
+run "pip install git+https://github.com/CharlesPikachu/pytools.git@master"
+```
+
+
+# Quick Start
+```python
+import random
+from pytools import pytools
+
+tool_client = pytools.pytools()
+all_supports = tool_client.getallsupported()
+tool_client.execute(random.choice(list(all_supports.values())))
+```
 
 
 # More
