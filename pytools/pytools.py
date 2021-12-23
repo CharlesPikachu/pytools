@@ -23,12 +23,7 @@ BASICINFO = '''************************************************************
 Function: Python实用工具集 V%s
 Author: Charles
 微信公众号: Charles的皮卡丘
-操作帮助:
-    输入r: 重新初始化程序(即返回主菜单)
-    输入q: 退出程序
-视频保存路径:
-    当前路径下的%s文件夹内
-************************************************************'''
+************************************************************''' % (__version__)
 
 
 '''Python实用工具集'''
@@ -84,6 +79,7 @@ class pytools():
 
 '''run'''
 if __name__ == '__main__':
+    import random
     tool_client = pytools()
-    print(tool_client.getallsupported())
-    tool_client.execute('trumptweetsgenerator')
+    all_supports = tool_client.getallsupported()
+    tool_client.execute(random.choice(list(all_supports.values())))

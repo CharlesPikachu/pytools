@@ -46,6 +46,9 @@ package_data.update({
 package_data.update({
     'pytools.modules.newyearcardgenerator': ['resources/bgimages/*', 'resources/contents/*', 'resources/fonts/*', 'resources/icon/*'] 
 })
+package_data.update({
+    'pytools.modules.trumptweetsgenerator': ['resources/*'] 
+})
 
 
 '''setup'''
