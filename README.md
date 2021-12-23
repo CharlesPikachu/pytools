@@ -20,29 +20,29 @@ You can star this repository to keep track of the project if it's helpful for yo
 
 
 # Support List
-|   Name                               |     Introduction                                                  |      Code                                         |     In Chinese                    |
-|   :----:                             |     :----:                                                        |      :----:                                       |     :----:                        |
-|   portscanner                        |     [click](https://mp.weixin.qq.com/s/98VnIO9JEdAqcIPdxq1cOg)    |      [click](./pytools/portscanner)               |     简易端口扫描器                |
-|   timer                              |     [click](https://mp.weixin.qq.com/s/8HcXQjcsyegYzp_yt1cE5w)    |      [click](./pytools/timer)                     |     简易计时器                    |
-|   emailsecurity                      |     [click](https://mp.weixin.qq.com/s/9u1CIa8MdoiXGGdPqae8fA)    |      [click](./pytools/emailsecurity)             |     邮箱安全性验证工具            |
-|   calculator                         |     [click](https://mp.weixin.qq.com/s/x6ygDEWHiYX10AP4y8e3MA)    |      [click](./pytools/calculator)                |     简易计算器                    |
-|   iplocationquery                    |     [click](https://mp.weixin.qq.com/s/lYWxt00erojeSoyRWA1R5g)    |      [click](./pytools/iplocationquery)           |     根据IP地址查询地理信息小工具  |
-|   clock                              |     [click](https://mp.weixin.qq.com/s/8JPxEHGZ2u7dsEUJS-9WbQ)    |      [click](./pytools/clock)                     |     简易时钟                      |
-|   inquiryexpress                     |     [click](https://mp.weixin.qq.com/s/haNR8Yr9RsSXaTd0jl5PFA)    |      [click](./pytools/inquiryexpress)            |     快递查询系统                  |
-|   qrcodegenerator                    |     [click](https://mp.weixin.qq.com/s/XFmumQbQP4d9qf6HQBLVnA)    |      [click](./pytools/qrcodegenerator)           |     二维码生成器                  |
-|   musicplayer                        |     [click](https://mp.weixin.qq.com/s/SUyRNz_M7B6bcdV7-YxlZQ)    |      [click](./pytools/musicplayer)               |     音乐播放器                    |
-|   luxunsentencesquery                |     [click](https://mp.weixin.qq.com/s/dQ8NfwFDoZw-6c1SPEl0aw)    |      [click](./pytools/luxunsentencesquery)       |     鲁迅名言查询系统              |
-|   runcat                             |     [click](https://mp.weixin.qq.com/s/8Fgzb8JiAoNSJqUanSi85Q)    |      [click](./pytools/runcat)                    |     奔跑的猫                      |
-|   newyearcardgenerator               |     [click](https://mp.weixin.qq.com/s/XCPkiXrKGZrVpNvyRlzgvA)    |      [click](./pytools/newyearcardgenerator)      |     新年贺卡生成器                |
-|   naughtyconfession                  |     [click](https://mp.weixin.qq.com/s/wMxMrx07ZeOfYEXpuGYVsg)    |      [click](./pytools/naughtyconfession)         |     仿抖音表白神器                |
-|   succulentquery                     |     [click](https://mp.weixin.qq.com/s/1_PzYVkMXwXrCiHBP5nZtQ)    |      [click](./pytools/succulentquery)            |     多肉数据查询系统              | 
-|   artsigngenerator                   |     [click](https://mp.weixin.qq.com/s/CYxAgJZdEc87XIRcqWgRqw)    |      [click](./pytools/artsigngenerator)          |     艺术签名生成器                | 
-|   genderpredictor                    |     [click](https://mp.weixin.qq.com/s/NS3DfRpIfw5wFsV3EaqEzQ)    |      [click](./pytools/genderpredictor)           |     给定中文名的性别猜测器        |
-|   idiomsolitaire                     |     [click](https://mp.weixin.qq.com/s/ncgl2OBUZsE77gOy1gclYg)    |      [click](./pytools/idiomsolitaire)            |     成语接龙小软件                |
-|   trumptweetsgenerator               |     [click](https://mp.weixin.qq.com/s/KO_nWpejIqQNKZgbCBfWEQ)    |      [click](./pytools/trumptweetsgenerator)      |     特朗普推特生成器              |
-|   idcardquery                        |     [click](https://mp.weixin.qq.com/s/2zljIGm-5WlRCq68ADXSiw)    |      [click](./pytools/idcardquery)               |     身份证信息查询工具            |
-|   videoplayer                        |     [click](https://mp.weixin.qq.com/s/pG6SwhfNSWZuHxuMcEQZog)    |      [click](./pytools/videoplayer)               |     视频播放器                    |
-|   coupletgenerator                   |     [click](https://mp.weixin.qq.com/s/L1gmiMJ-M8T-QgSeJckYEw)    |      [click](./pytools/coupletgenerator)          |     春联生成器                    |
+|   Name                               |     Introduction                                                  |      Code                                                 |     In Chinese                    |
+|   :----:                             |     :----:                                                        |      :----:                                               |     :----:                        |
+|   portscanner                        |     [click](https://mp.weixin.qq.com/s/98VnIO9JEdAqcIPdxq1cOg)    |      [click](./pytools/modules/portscanner)               |     简易端口扫描器                |
+|   timer                              |     [click](https://mp.weixin.qq.com/s/8HcXQjcsyegYzp_yt1cE5w)    |      [click](./pytools/modules/timer)                     |     简易计时器                    |
+|   emailsecurity                      |     [click](https://mp.weixin.qq.com/s/9u1CIa8MdoiXGGdPqae8fA)    |      [click](./pytools/modules/emailsecurity)             |     邮箱安全性验证工具            |
+|   calculator                         |     [click](https://mp.weixin.qq.com/s/x6ygDEWHiYX10AP4y8e3MA)    |      [click](./pytools/modules/calculator)                |     简易计算器                    |
+|   iplocationquery                    |     [click](https://mp.weixin.qq.com/s/lYWxt00erojeSoyRWA1R5g)    |      [click](./pytools/modules/iplocationquery)           |     根据IP地址查询地理信息小工具  |
+|   clock                              |     [click](https://mp.weixin.qq.com/s/8JPxEHGZ2u7dsEUJS-9WbQ)    |      [click](./pytools/modules/clock)                     |     简易时钟                      |
+|   inquiryexpress                     |     [click](https://mp.weixin.qq.com/s/haNR8Yr9RsSXaTd0jl5PFA)    |      [click](./pytools/modules/inquiryexpress)            |     快递查询系统                  |
+|   qrcodegenerator                    |     [click](https://mp.weixin.qq.com/s/XFmumQbQP4d9qf6HQBLVnA)    |      [click](./pytools/modules/qrcodegenerator)           |     二维码生成器                  |
+|   musicplayer                        |     [click](https://mp.weixin.qq.com/s/SUyRNz_M7B6bcdV7-YxlZQ)    |      [click](./pytools/modules/musicplayer)               |     音乐播放器                    |
+|   luxunsentencesquery                |     [click](https://mp.weixin.qq.com/s/dQ8NfwFDoZw-6c1SPEl0aw)    |      [click](./pytools/modules/luxunsentencesquery)       |     鲁迅名言查询系统              |
+|   runcat                             |     [click](https://mp.weixin.qq.com/s/8Fgzb8JiAoNSJqUanSi85Q)    |      [click](./pytools/modules/runcat)                    |     奔跑的猫                      |
+|   newyearcardgenerator               |     [click](https://mp.weixin.qq.com/s/XCPkiXrKGZrVpNvyRlzgvA)    |      [click](./pytools/modules/newyearcardgenerator)      |     新年贺卡生成器                |
+|   naughtyconfession                  |     [click](https://mp.weixin.qq.com/s/wMxMrx07ZeOfYEXpuGYVsg)    |      [click](./pytools/modules/naughtyconfession)         |     仿抖音表白神器                |
+|   succulentquery                     |     [click](https://mp.weixin.qq.com/s/1_PzYVkMXwXrCiHBP5nZtQ)    |      [click](./pytools/modules/succulentquery)            |     多肉数据查询系统              | 
+|   artsigngenerator                   |     [click](https://mp.weixin.qq.com/s/CYxAgJZdEc87XIRcqWgRqw)    |      [click](./pytools/modules/artsigngenerator)          |     艺术签名生成器                | 
+|   genderpredictor                    |     [click](https://mp.weixin.qq.com/s/NS3DfRpIfw5wFsV3EaqEzQ)    |      [click](./pytools/modules/genderpredictor)           |     给定中文名的性别猜测器        |
+|   idiomsolitaire                     |     [click](https://mp.weixin.qq.com/s/ncgl2OBUZsE77gOy1gclYg)    |      [click](./pytools/modules/idiomsolitaire)            |     成语接龙小软件                |
+|   trumptweetsgenerator               |     [click](https://mp.weixin.qq.com/s/KO_nWpejIqQNKZgbCBfWEQ)    |      [click](./pytools/modules/trumptweetsgenerator)      |     特朗普推特生成器              |
+|   idcardquery                        |     [click](https://mp.weixin.qq.com/s/2zljIGm-5WlRCq68ADXSiw)    |      [click](./pytools/modules/idcardquery)               |     身份证信息查询工具            |
+|   videoplayer                        |     [click](https://mp.weixin.qq.com/s/pG6SwhfNSWZuHxuMcEQZog)    |      [click](./pytools/modules/videoplayer)               |     视频播放器                    |
+|   coupletgenerator                   |     [click](https://mp.weixin.qq.com/s/L1gmiMJ-M8T-QgSeJckYEw)    |      [click](./pytools/modules/coupletgenerator)          |     春联生成器                    |
 
 
 # Coming Soon
