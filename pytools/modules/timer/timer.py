@@ -11,6 +11,7 @@ import SimpleGUICS2Pygame.simpleguics2pygame as simplegui
 
 '''简易计时器'''
 class Timer():
+    tool_name = '简易计时器'
     def __init__(self, start_color='white', stop_color='red', title='简易计时器 —— Charles的皮卡丘', **kwargs):
         self.title = title
         self.color = start_color

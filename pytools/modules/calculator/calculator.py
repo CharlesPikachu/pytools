@@ -1,6 +1,6 @@
 '''
 Function:
-    tkinter计算器
+    简易计算器
 Author:
     Charles
 微信公众号:
@@ -10,9 +10,10 @@ import math
 import tkinter
 
 
-'''tkinter计算器'''
+'''简易计算器'''
 class Calculator():
-    def __init__(self, title='计算器 —— Charles的皮卡丘', root_size=(320, 420), **kwargs):
+    tool_name = '简易计算器'
+    def __init__(self, title='简易计算器 —— Charles的皮卡丘', root_size=(320, 420), **kwargs):
         # 基本界面
         self.root = tkinter.Tk()
         self.root.resizable(width=False, height=False)

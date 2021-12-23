@@ -12,6 +12,7 @@ import datetime
 
 '''简易时钟'''
 class Clock():
+    tool_name = '简易时钟'
     def __init__(self, title='简易时钟 —— Charles的皮卡丘', time_deltas=(0, 0, 0), **kwargs):
         turtle.title(title)
         self.time_deltas = time_deltas

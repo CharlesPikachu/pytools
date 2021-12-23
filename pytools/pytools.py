@@ -8,6 +8,7 @@ Author:
 '''
 import sys
 import warnings
+from PyQt5.QtWidgets import QApplication
 if __name__ == '__main__':
     from modules import *
     from __init__ import __version__
@@ -35,14 +36,17 @@ class pytools():
     def __init__(self, **kwargs):
         for key, value in kwargs.items(): setattr(self, key, value)
         self.supported_tools = self.initialize()
-    '''非开发人员外部调用'''
-    def run(self):
-        pass
     '''执行对应的小程序'''
     def execute(self, tool_type=None, config={}):
         assert tool_type in self.supported_tools, 'unsupport tool_type %s...' % tool_type
-        client = self.supported_tools[tool_type](**config)
-        client.run()
+        if tool_type in ['luxunsentencesquery']:
+            app = QApplication(sys.argv)
+            client = self.supported_tools[tool_type](**config)
+            client.show()
+            sys.exit(app.exec_())
+        else:
+            client = self.supported_tools[tool_type](**config)
+            client.run()
     '''初始化'''
     def initialize(self):
         supported_tools = {
@@ -51,12 +55,19 @@ class pytools():
             'calculator': Calculator,
             'portscanner': PortScanner,
             'emailsecurity': EmailSecurity,
+            'luxunsentencesquery': LuxunSentencesQuery
         }
         return supported_tools
+    '''获得所有支持的tools信息'''
+    def getallsupported(self):
+        all_supports = {}
+        for key, value in self.supported_tools.items():
+            all_supports[value.tool_name] = key
+        return all_supports
 
 
 '''run'''
 if __name__ == '__main__':
     tool_client = pytools()
-    # tool_client.run()
-    tool_client.execute('emailsecurity')
+    print(tool_client.getallsupported())
+    tool_client.execute('luxunsentencesquery')

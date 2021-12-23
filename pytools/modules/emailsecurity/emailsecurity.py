@@ -1,6 +1,6 @@
 '''
 Function:
-    邮箱安全性验证
+    邮箱安全性验证工具
 Author:
     Charles
 微信公众号:
@@ -14,8 +14,9 @@ import requests
 from lxml import etree
 
 
-'''邮箱安全性验证'''
+'''邮箱安全性验证工具'''
 class EmailSecurity():
+    tool_name = '邮箱安全性验证工具'
     def __init__(self, emails=None, check_mode='Haveibeenpwned', hibp_api_key=None, **kwargs):
         assert check_mode in ['Firefox', 'Haveibeenpwned']
         if hibp_api_key is None: hibp_api_key = random.choice(['e0c4c2b5c7304030912b2251e15d7dac', '398bba8c95cc4db4a23138af3037a496', 'f269230d7044457a910dc8d2d1205013'])

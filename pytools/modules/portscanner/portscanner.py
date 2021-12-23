@@ -1,6 +1,6 @@
 '''
 Function:
-    简单的端口扫描器
+    简易端口扫描器
 Author:
     Charles
 微信公众号:
@@ -14,6 +14,7 @@ import threading
 
 '''简单的端口扫描器'''
 class PortScanner(threading.Thread):
+    tool_name = '简易端口扫描器'
     def __init__(self, target_ip='127.0.0.1', port_min=0, port_max=65535, savedir='.', savename='result.txt', **kwargs):
         threading.Thread.__init__(self)
         assert isinstance(port_max, int) and isinstance(port_min, int)
