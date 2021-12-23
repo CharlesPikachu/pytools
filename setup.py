@@ -29,10 +29,25 @@ package_data.update({
     'pytools.modules.musicplayer': ['resources/*'] 
 })
 package_data.update({
-    'pytools.modules.genderpredictor': ['resources/*'] 
+    'pytools.modules.idcardquery': ['resources/*'] 
+})
+package_data.update({
+    'pytools.modules.inquiryexpress': ['resources/*'] 
+})
+package_data.update({
+    'pytools.modules.idiomsolitaire': ['resources/*'] 
+})
+package_data.update({
+    'pytools.modules.idiomsolitaire': ['resources/*'] 
+})
+package_data.update({
+    'pytools.modules.succulentquery': ['resources/icon.png', 'resources/succulents/AK/*'] 
 })
 package_data.update({
     'pytools.modules.qrcodegenerator': ['resources/*'] 
+})
+package_data.update({
+    'pytools.modules.coupletgenerator': ['resources/*'] 
 })
 package_data.update({
     'pytools.modules.artsigngenerator': ['resources/*'] 
@@ -70,7 +85,7 @@ setup(
     license=pytools.__license__,
     include_package_data=True,
     package_data=package_data,
-    install_requires=['requests >= 2.22.0', 'click >= 7.0', 'prettytable >= 0.7.2'],
+    install_requires=list(open('requirements.txt', 'r').readlines()),
     zip_safe=True,
     packages=find_packages(),
 )

@@ -9,3 +9,6 @@ psutil
 js2py
 markovify
 python-Levenshtein
+id_validator
+IPy
+pillow
