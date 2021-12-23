@@ -50,6 +50,7 @@ class pytools():
             'clock': Clock,
             'calculator': Calculator,
             'portscanner': PortScanner,
+            'emailsecurity': EmailSecurity,
         }
         return supported_tools
 
@@ -58,4 +59,4 @@ class pytools():
 if __name__ == '__main__':
     tool_client = pytools()
     # tool_client.run()
-    tool_client.execute('portscanner')
+    tool_client.execute('emailsecurity')
