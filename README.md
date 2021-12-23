@@ -1,11 +1,23 @@
-# Tools
+<div align="center">
+  <img src="./docs/logo.png" width="600"/>
+</div>
+<br />
+
+[![license](https://img.shields.io/github/license/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/blob/master/LICENSE)
+[![issue resolution](https://isitmaintained.com/badge/resolution/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/issues)
+[![open issues](https://isitmaintained.com/badge/open/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/issues)
+
+Documents: still on the way
+
+
+# Pytools
 ```
-Some useful tools written in python.  
+Some useful tools written by pure python.
 You can star this repository to keep track of the project if it's helpful for you, thank you for your support.
 ```
 
 
-# Contents
+# Support List
 |   Name                               |     Introduction                                                  |      Code                                                                              |     In Chinese              |
 |   :----:                             |     :----:                                                        |      :----:                                                                            |     :----:                  |
 |   Control your computer by emails    |     [click](https://mp.weixin.qq.com/s/KnG-mncegaB35v5THAUJXQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ControlPCbyEmail)     |     邮件控制电脑            |
@@ -37,7 +49,8 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   VideoPlayer                        |     [click](https://mp.weixin.qq.com/s/pG6SwhfNSWZuHxuMcEQZog)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/VideoPlayer)          |     视频播放器              |
 |   Couplet                            |     [click](https://mp.weixin.qq.com/s/L1gmiMJ-M8T-QgSeJckYEw)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/Couplet)              |     春联生成器              |
 
+
 # More
 #### WeChat Official Accounts
 *Charles_pikachu*  
-![img](pikachu.jpg)
+![img](./docs/pikachu.jpg)

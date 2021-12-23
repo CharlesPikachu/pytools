@@ -1,2 +1,0 @@
-pygame
-SimpleGUICS2Pygame
