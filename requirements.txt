@@ -1,0 +1,5 @@
+SimpleGUICS2Pygame
+lxml
+requests
+fuzzywuzzy
+PyQt5

@@ -39,7 +39,7 @@ class pytools():
     '''执行对应的小程序'''
     def execute(self, tool_type=None, config={}):
         assert tool_type in self.supported_tools, 'unsupport tool_type %s...' % tool_type
-        if tool_type in ['luxunsentencesquery']:
+        if tool_type in ['luxunsentencesquery', 'artsigngenerator']:
             app = QApplication(sys.argv)
             client = self.supported_tools[tool_type](**config)
             client.show()
@@ -55,7 +55,8 @@ class pytools():
             'calculator': Calculator,
             'portscanner': PortScanner,
             'emailsecurity': EmailSecurity,
-            'luxunsentencesquery': LuxunSentencesQuery
+            'artsigngenerator': ArtSignGenerator,
+            'luxunsentencesquery': LuxunSentencesQuery,
         }
         return supported_tools
     '''获得所有支持的tools信息'''
@@ -70,4 +71,4 @@ class pytools():
 if __name__ == '__main__':
     tool_client = pytools()
     print(tool_client.getallsupported())
-    tool_client.execute('luxunsentencesquery')
+    tool_client.execute('artsigngenerator')

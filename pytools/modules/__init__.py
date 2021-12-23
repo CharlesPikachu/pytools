@@ -4,4 +4,5 @@ from .clock import Clock
 from .calculator import Calculator
 from .portscanner import PortScanner
 from .emailsecurity import EmailSecurity
+from .artsigngenerator import ArtSignGenerator
 from .luxunsentencesquery import LuxunSentencesQuery

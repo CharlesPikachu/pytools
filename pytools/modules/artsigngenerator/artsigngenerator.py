@@ -19,18 +19,20 @@ from PyQt5 import QtWidgets, QtGui
 
 '''艺术签名生成器'''
 class ArtSignGenerator(QWidget):
-    def __init__(self, parent=None):
+    tool_name = '艺术签名生成器'
+    def __init__(self, parent=None, title='艺术签名生成器 —— Charles的皮卡丘', **kwargs):
         super(ArtSignGenerator, self).__init__(parent)
+        rootdir = os.path.split(os.path.abspath(__file__))[0]
         self.setFixedSize(600, 500)
-        self.setWindowTitle('艺术签名生成器-Charles的皮卡丘')
-        self.setWindowIcon(QIcon('resource/icon/icon.jpg'))
-        self.grid = QGridLayout()
+        self.setWindowTitle(title)
+        self.setWindowIcon(QIcon(os.path.join(rootdir, 'resources/icon.jpg')))
         # 定义一些必要的组件
+        self.grid = QGridLayout()
         # --label
         self.show_label = QLabel()
         self.show_label.setScaledContents(True)
         self.show_label.setMaximumSize(600, 400)
-        self.show_image = Image.open('resource/image/ori.jpg').convert('RGB')
+        self.show_image = Image.open(os.path.join(rootdir, 'resources/background.jpg')).convert('RGB')
         self.updateimage()
         self.show_image_ext = 'jpg'
         self.name_label = QLabel('输入您的姓名:')
@@ -47,8 +49,7 @@ class ArtSignGenerator(QWidget):
         for item in ['一笔艺术签', '连笔商务签', '一笔商务签', '真人手写', '暴躁字']:
             self.font_combobox.addItem(item)
         self.color_combobox = QComboBox()
-        for item in ['Black', 'Blue', 'Red', 'Green', 'Yellow', 
-                     'Pink', 'DeepSkyBlue', 'Cyan', 'Orange', 'Seashell']:
+        for item in ['Black', 'Blue', 'Red', 'Green', 'Yellow', 'Pink', 'DeepSkyBlue', 'Cyan', 'Orange', 'Seashell']:
             self.color_combobox.addItem(item)
         # 组件布局
         self.grid.addWidget(self.show_label, 0, 0, 5, 5)
@@ -67,42 +68,42 @@ class ArtSignGenerator(QWidget):
     '''生成签名'''
     def generate(self):
         font2ids_dict = {
-                            '一笔艺术签': ['901', '15'],
-                            '连笔商务签': ['904', '15'],
-                            '一笔商务签': ['905', '14'],
-                            '真人手写': ['343', '14'],
-                            '卡通趣圆字': ['397', '14'],
-                            '暴躁字': ['380', '14']
-                    }
+            '一笔艺术签': ['901', '15'],
+            '连笔商务签': ['904', '15'],
+            '一笔商务签': ['905', '14'],
+            '真人手写': ['343', '14'],
+            '卡通趣圆字': ['397', '14'],
+            '暴躁字': ['380', '14']
+        }
         color2ids_dict = {
-                            'Black': ['#000000', '#FFFFFF'],
-                            'Blue': ['#0000FF', '#FFFFFF'],
-                            'Red': ['#FF0000', '#FFFFFF'],
-                            'Green': ['#00FF00', '#FFFFFF'],
-                            'Yellow': ['#FFFF00', '#FFFFFF'],
-                            'Pink': ['#FFC0CB', '#FFFFFF'],
-                            'DeepSkyBlue': ['#00BFFF', '#FFFFFF'],
-                            'Cyan': ['#00FFFF', '#FFFFFF'],
-                            'Orange': ['#FFA500', '#FFFFFF'],
-                            'Seashell': ['#FFF5EE', '#FFFFFF']
-                        }
+            'Black': ['#000000', '#FFFFFF'],
+            'Blue': ['#0000FF', '#FFFFFF'],
+            'Red': ['#FF0000', '#FFFFFF'],
+            'Green': ['#00FF00', '#FFFFFF'],
+            'Yellow': ['#FFFF00', '#FFFFFF'],
+            'Pink': ['#FFC0CB', '#FFFFFF'],
+            'DeepSkyBlue': ['#00BFFF', '#FFFFFF'],
+            'Cyan': ['#00FFFF', '#FFFFFF'],
+            'Orange': ['#FFA500', '#FFFFFF'],
+            'Seashell': ['#FFF5EE', '#FFFFFF']
+        }
         url = 'http://www.jiqie.com/a/re14.php'
         headers = {
-                    'Referer': 'http://www.jiqie.com/a/14.htm',
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
-                    'Host': 'www.jiqie.com',
-                    'Origin': 'http://www.jiqie.com'
-                }
+            'Referer': 'http://www.jiqie.com/a/14.htm',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+            'Host': 'www.jiqie.com',
+            'Origin': 'http://www.jiqie.com'
+        }
         ids_0 = font2ids_dict[self.font_combobox.currentText()]
         ids_1 = color2ids_dict[self.color_combobox.currentText()]
         data = {
-                    'id': self.name_edit.text(),
-                    'zhenbi': '20191123',
-                    'id1': ids_0[0],
-                    'id2': ids_0[1],
-                    'id3': ids_1[0],
-                    'id5': ids_1[1]
-                }
+            'id': self.name_edit.text(),
+            'zhenbi': '20191123',
+            'id1': ids_0[0],
+            'id2': ids_0[1],
+            'id3': ids_1[0],
+            'id5': ids_1[1]
+        }
         res = requests.post(url, headers=headers, data=data)
         image_url = re.findall(r'src="(.*?)"', res.text)[0]
         self.show_image_ext = image_url.split('.')[-1].split('?')[0]
@@ -131,11 +132,3 @@ class ArtSignGenerator(QWidget):
         if filename[0]:
             self.show_image.save(filename[0])
             QDialog().show()
-
-
-'''run'''
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    gui = ArtSignGenerator()
-    gui.show()
-    sys.exit(app.exec_())
