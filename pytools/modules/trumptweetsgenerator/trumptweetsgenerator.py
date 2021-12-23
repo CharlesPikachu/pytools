@@ -7,57 +7,58 @@ Author:
     Charles的皮卡丘
 '''
 import os
-import js
-import sys
 import json
-import js2py
+import time
 import random
+import hashlib
 import requests
 import markovify
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
 
-'''Google翻译类'''
-class google():
+'''有道翻译'''
+class youdao():
     def __init__(self):
         self.headers = {
-                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
-                    }
-        self.url = 'https://translate.google.cn/translate_a/single?client=t&sl=auto&tl={}&hl=zh-CN&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&tk={}&q={}'
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+            'Referer': 'http://fanyi.youdao.com/',
+            'Cookie': 'OUTFOX_SEARCH_USER_ID=-481680322@10.169.0.83;'
+        }
+        self.data = {
+            'i': None, 'from': 'AUTO', 'to': 'AUTO', 'smartresult': 'dict',
+            'client': 'fanyideskweb', 'salt': None, 'sign': None, 'lts': None,
+            'bv': None, 'doctype': 'json', 'version': '2.1', 'keyfrom': 'fanyi.web', 'action': 'FY_BY_REALTlME'
+        }
+        self.url = 'http://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule'
     def translate(self, word):
-        if len(word) > 4891:
-            raise RuntimeError('The length of word should be less than 4891...')
-        languages = ['zh-CN', 'en']
-        if not self.isChinese(word):
-            target_language = languages[0]
-        else:
-            target_language = languages[1]
-        res = requests.get(self.url.format(target_language, self.getTk(word), word), headers=self.headers)
-        return [res.json()[0][0][0]]
-    def getTk(self, word):
-        evaljs = js2py.EvalJs()
-        js_code = js.gg_js_code
-        evaljs.execute(js_code)
-        tk = evaljs.TL(word)
-        return tk
-    def isChinese(self, word):
-        for w in word:
-            if '\u4e00' <= w <= '\u9fa5':
-                return True
-        return False
+        lts = str(int(time.time() * 10000))
+        salt = lts + str(int(random.random() * 10))
+        sign = 'fanyideskweb' + word + salt + 'Y2FYu%TNSbMCxc3t2u^XT'
+        sign = hashlib.md5(sign.encode('utf-8')).hexdigest()
+        bv = '5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'
+        bv = hashlib.md5(bv.encode('utf-8')).hexdigest()
+        self.data['i'] = word
+        self.data['salt'] = salt
+        self.data['sign'] = sign
+        self.data['lts'] = lts
+        self.data['bv'] = bv
+        response = requests.post(self.url, headers=self.headers, data=self.data)
+        return [response.json()['translateResult'][0][0].get('tgt')]
 
 
 '''特朗普推特生成器'''
 class TrumpTweetsGenerator(QWidget):
-    def __init__(self, parent=None, **kwargs):
+    tool_name = '特朗普推特生成器'
+    def __init__(self, parent=None, title='特朗普推特生成器 —— Charles的皮卡丘', **kwargs):
         super(TrumpTweetsGenerator, self).__init__(parent)
+        rootdir = os.path.split(os.path.abspath(__file__))[0]
         # 读取数据, 构建马尔可夫链
-        self.tweets = self.readTweets()
+        self.tweets = self.readTweets(os.path.join(rootdir, 'resources/trump_tweets.json'))
         self.markov_model = self.constructMarkov(self.tweets)
         # 定义组件
-        self.setWindowTitle('特朗普推特生成器 - 微信公众号:Charles的皮卡丘')
-        self.setWindowIcon(QIcon('data/icon.jpg'))
+        self.setWindowTitle(title)
+        self.setWindowIcon(QIcon(os.path.join(rootdir, 'resources/icon.jpg')))
         self.setFixedSize(600, 400)
         self.label_result = QLabel('生成的结果:')
         self.button_generate = QPushButton('生成特朗普推特')
@@ -74,7 +75,7 @@ class TrumpTweetsGenerator(QWidget):
         self.button_generate.clicked.connect(self.generateTweet)
         self.button_translate.clicked.connect(self.translate)
     '''推特数据读取'''
-    def readTweets(self, filepath='data/trump_tweets.json'):
+    def readTweets(self, filepath=None):
         fp = open(filepath, 'r', encoding='utf-8')
         tweets = json.load(fp)
         all_infos = {'hashtags': [], 'mentions': [], 'contents': []}
@@ -104,7 +105,7 @@ class TrumpTweetsGenerator(QWidget):
         return tweet
     '''翻译当前的推特'''
     def translate(self):
-        api = google()
+        api = youdao()
         tweet = self.text_result.toPlainText()
         translated_tweet = '翻译接口调用失败'
         if tweet:
@@ -115,11 +116,3 @@ class TrumpTweetsGenerator(QWidget):
         text = '原文: %s\n\n译文: %s' % (tweet, translated_tweet)
         self.text_result.setText(text)
         return translated_tweet
-
-
-'''run'''
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    client = TrumpTweetsGenerator()
-    client.show()
-    sys.exit(app.exec_())

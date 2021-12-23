@@ -1,4 +1,0 @@
-pyqt5
-js2py
-markovify
-requests

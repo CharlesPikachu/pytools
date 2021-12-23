@@ -7,7 +7,6 @@ Author:
     Charles的皮卡丘
 '''
 import os
-import sys
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -17,11 +16,14 @@ from PyQt5.QtMultimediaWidgets import *
 
 '''视频播放器'''
 class VideoPlayer(QWidget):
-    def __init__(self, parent=None, **kwargs):
+    tool_name = '视频播放器'
+    def __init__(self, parent=None, title='视频播放器 —— Charles的皮卡丘', **kwargs):
         super(VideoPlayer, self).__init__(parent)
+        rootdir = os.path.split(os.path.abspath(__file__))[0]
+        self.rootdir = rootdir
         # 初始化窗口
-        self.setWindowTitle('视频播放器 - 微信公众号: Charles的皮卡丘')
-        self.setWindowIcon(QIcon(os.path.join(os.getcwd(), 'images/icon.png')))
+        self.setWindowTitle(title)
+        self.setWindowIcon(QIcon(os.path.join(rootdir, 'resources/icon.png')))
         self.setGeometry(300, 50, 810, 600)
         self.setWindowFlags(Qt.WindowCloseButtonHint | Qt.WindowMinimizeButtonHint)
         palette = QPalette()  
@@ -44,7 +46,7 @@ class VideoPlayer(QWidget):
         self.select_video_btn = QPushButton('选择')
         # --播放按钮
         self.play_btn = QPushButton(self)
-        self.play_btn.setIcon(QIcon(os.path.join(os.getcwd(), 'images/play.png')))
+        self.play_btn.setIcon(QIcon(os.path.join(rootdir, 'resources/play.png')))
         self.play_btn.setIconSize(QSize(25, 25))
         self.play_btn.setStyleSheet('''QPushButton{border:none;}QPushButton:hover{border:none;border-radius:35px;}''')
         self.play_btn.setCursor(QCursor(Qt.PointingHandCursor))
@@ -52,7 +54,7 @@ class VideoPlayer(QWidget):
         self.play_btn.setFlat(True)
         # --暂停按钮
         self.pause_btn = QPushButton('')
-        self.pause_btn.setIcon(QIcon(os.path.join(os.getcwd(), 'images/pause.png')))
+        self.pause_btn.setIcon(QIcon(os.path.join(rootdir, 'resources/pause.png')))
         self.pause_btn.setIconSize(QSize(25, 25))
         self.pause_btn.setStyleSheet('''QPushButton{border:none;}QPushButton:hover{border:none;}''')
         self.pause_btn.setCursor(QCursor(Qt.PointingHandCursor))
@@ -71,7 +73,7 @@ class VideoPlayer(QWidget):
         self.volume_slider.setMaximum(100)
         self.volume_slider.setValue(50)
         self.mute_btn = QPushButton('')
-        self.mute_btn.setIcon(QIcon(os.path.join(os.getcwd(), 'images/sound.png')))
+        self.mute_btn.setIcon(QIcon(os.path.join(rootdir, 'resources/sound.png')))
         self.mute_btn.setIconSize(QSize(25, 25))
         self.mute_btn.setStyleSheet('''QPushButton{border:none;}QPushButton:hover{border:none;}''')
         self.mute_btn.setCursor(QCursor(Qt.PointingHandCursor))
@@ -131,7 +133,7 @@ class VideoPlayer(QWidget):
     '''禁音'''
     def mute(self):
         if self.player.isMuted():
-            self.mute_btn.setIcon(QIcon(os.path.join(os.getcwd(), 'images/sound.png')))
+            self.mute_btn.setIcon(QIcon(os.path.join(self.rootdir, 'resources/sound.png')))
             self.player.setMuted(False)
             self.volume_label.setText('50')
             self.volume_slider.setValue(50)
@@ -140,7 +142,7 @@ class VideoPlayer(QWidget):
             self.player.setMuted(True)
             self.volume_label.setText('0')
             self.volume_slider.setValue(0)
-            self.mute_btn.setIcon(QIcon(os.path.join(os.getcwd(), 'images/mute.png')))
+            self.mute_btn.setIcon(QIcon(os.path.join(self.rootdir, 'resources/mute.png')))
     '''打开视频文件'''
     def openvideo(self):
         # 打开并显示视频路径
@@ -162,12 +164,12 @@ class VideoPlayer(QWidget):
             self.player.setVolume(value)
             self.volume_label.setText(str(value))
             self.volume_slider.setValue(value)
-            self.mute_btn.setIcon(QIcon(os.path.join(os.getcwd(), 'images/sound.png')))
+            self.mute_btn.setIcon(QIcon(os.path.join(self.rootdir, 'resources/sound.png')))
         else:
             self.player.setMuted(True)
             self.volume_label.setText('0')
             self.volume_slider.setValue(0)
-            self.mute_btn.setIcon(QIcon(os.path.join(os.getcwd(), 'images/mute.png')))
+            self.mute_btn.setIcon(QIcon(os.path.join(self.rootdir, 'resources/mute.png')))
     '''播放进度设置'''
     def setPlayProgress(self):
         _, right = self.play_progress_label.text().split('/')
@@ -193,11 +195,3 @@ class VideoPlayer(QWidget):
     def resizeEvent(self, event):
         size = event.size()
         self.video_widget.setGeometry(5, 5, size.width() - 5, size.height() - 80)
-
-
-'''run'''
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    client = VideoPlayer()
-    client.show()
-    sys.exit(app.exec_())

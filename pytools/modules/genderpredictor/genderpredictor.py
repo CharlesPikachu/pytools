@@ -8,7 +8,6 @@ Author:
 '''
 import os
 import csv
-import sys
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 

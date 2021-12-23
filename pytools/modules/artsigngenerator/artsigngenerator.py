@@ -9,7 +9,6 @@ Author:
 import os
 import re
 import io
-import sys
 import requests
 from PIL import Image
 from PyQt5.QtGui import *
@@ -104,12 +103,12 @@ class ArtSignGenerator(QWidget):
             'id3': ids_1[0],
             'id5': ids_1[1]
         }
-        res = requests.post(url, headers=headers, data=data)
-        image_url = re.findall(r'src="(.*?)"', res.text)[0]
+        response = requests.post(url, headers=headers, data=data)
+        image_url = re.findall(r'src="(.*?)"', response.text)[0]
         self.show_image_ext = image_url.split('.')[-1].split('?')[0]
-        res = requests.get(image_url)
+        response = requests.get(image_url)
         fp = open('tmp.%s' % self.show_image_ext, 'wb')
-        fp.write(res.content)
+        fp.write(response.content)
         fp.close()
         self.show_image = Image.open('tmp.%s' % self.show_image_ext).convert('RGB')
         self.updateimage()

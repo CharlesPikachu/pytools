@@ -20,16 +20,31 @@ with open('README.md', 'r', encoding='utf-8') as f:
 '''package data'''
 package_data = {}
 package_data.update({
+    'pytools.modules.runcat': ['resources/*'] 
+})
+package_data.update({
+    'pytools.modules.videoplayer': ['resources/*'] 
+})
+package_data.update({
     'pytools.modules.musicplayer': ['resources/*'] 
 })
 package_data.update({
     'pytools.modules.genderpredictor': ['resources/*'] 
 })
 package_data.update({
+    'pytools.modules.qrcodegenerator': ['resources/*'] 
+})
+package_data.update({
     'pytools.modules.artsigngenerator': ['resources/*'] 
 })
 package_data.update({
+    'pytools.modules.naughtyconfession': ['resources/music/*', 'resources/font/*', 'resources/images/*'] 
+})
+package_data.update({
     'pytools.modules.luxunsentencesquery': ['resources/*'] 
+})
+package_data.update({
+    'pytools.modules.newyearcardgenerator': ['resources/bgimages/*', 'resources/contents/*', 'resources/fonts/*', 'resources/icon/*'] 
 })
 
 

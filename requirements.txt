@@ -3,3 +3,9 @@ lxml
 requests
 fuzzywuzzy
 PyQt5
+qrcode
+pygame
+psutil
+js2py
+markovify
+python-Levenshtein

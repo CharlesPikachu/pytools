@@ -39,7 +39,11 @@ class pytools():
     '''执行对应的小程序'''
     def execute(self, tool_type=None, config={}):
         assert tool_type in self.supported_tools, 'unsupport tool_type %s...' % tool_type
-        if tool_type in ['luxunsentencesquery', 'artsigngenerator', 'genderpredictor', 'musicplayer']:
+        qt_tools = [
+            'newyearcardgenerator', 'luxunsentencesquery', 'artsigngenerator', 'genderpredictor', 'musicplayer', 'qrcodegenerator', 'videoplayer',
+            'trumptweetsgenerator',
+        ]
+        if tool_type in qt_tools:
             app = QApplication(sys.argv)
             client = self.supported_tools[tool_type](**config)
             client.show()
@@ -52,13 +56,19 @@ class pytools():
         supported_tools = {
             'timer': Timer,
             'clock': Clock,
+            'runcat': RunCat,
             'calculator': Calculator,
+            'videoplayer': VideoPlayer,
             'musicplayer': MusicPlayer,
             'portscanner': PortScanner,
             'emailsecurity': EmailSecurity,
             'genderpredictor': GenderPredictor,
+            'qrcodegenerator': QRCodeGenerator,
             'artsigngenerator': ArtSignGenerator,
+            'naughtyconfession': NaughtyConfession,
             'luxunsentencesquery': LuxunSentencesQuery,
+            'newyearcardgenerator': NewYearCardGenerator,
+            'trumptweetsgenerator': TrumpTweetsGenerator,
         }
         return supported_tools
     '''获得所有支持的tools信息'''
@@ -67,10 +77,13 @@ class pytools():
         for key, value in self.supported_tools.items():
             all_supports[value.tool_name] = key
         return all_supports
+    '''repr'''
+    def __repr__(self):
+        return BASICINFO
 
 
 '''run'''
 if __name__ == '__main__':
     tool_client = pytools()
     print(tool_client.getallsupported())
-    tool_client.execute('musicplayer')
+    tool_client.execute('trumptweetsgenerator')

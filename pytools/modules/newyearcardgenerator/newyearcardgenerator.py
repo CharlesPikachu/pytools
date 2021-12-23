@@ -1,6 +1,6 @@
 '''
 Function:
-    生成新年祝福贺卡
+    新年贺卡生成器
 Author:
     Charles
 微信公众号:
@@ -8,20 +8,21 @@ Author:
 '''
 import os
 import io
-import sys
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import *
 from PyQt5 import QtWidgets, QtGui
 from PIL import Image, ImageDraw, ImageFont
 
 
-'''生成新年祝福贺卡'''
-class newyearCardGUI(QtWidgets.QWidget):
-    def __init__(self):
-        super(newyearCardGUI, self).__init__()
+'''新年贺卡生成器'''
+class NewYearCardGenerator(QtWidgets.QWidget):
+    tool_name = '新年贺卡生成器'
+    def __init__(self, parent=None, title='新年贺卡生成器 —— Charles的皮卡丘', **kwargs):
+        super(NewYearCardGenerator, self).__init__()
+        rootdir = os.path.split(os.path.abspath(__file__))[0]
         self.setFixedSize(600, 500)
-        self.setWindowTitle('新年贺卡生成器-Charles的皮卡丘')
-        self.setWindowIcon(QIcon('icon/icon.png'))
+        self.setWindowTitle(title)
+        self.setWindowIcon(QIcon(os.path.join(rootdir, 'resources/icon/icon.png')))
         self.grid = QGridLayout()
         # 一些全局变量
         self.card_image = None
@@ -37,11 +38,11 @@ class newyearCardGUI(QtWidgets.QWidget):
         self.show_label.setMaximumSize(600, 300)
         # --输入框
         self.content_edit = QLineEdit()
-        self.content_edit.setText('contents/1.card')
+        self.content_edit.setText(os.path.join(rootdir, 'resources/contents/1.card'))
         self.bg_edit = QLineEdit()
-        self.bg_edit.setText('bgimages/1.png')
+        self.bg_edit.setText(os.path.join(rootdir, 'resources/bgimages/1.png'))
         self.font_edit = QLineEdit()
-        self.font_edit.setText('fonts/font.TTF')
+        self.font_edit.setText(os.path.join(rootdir, 'resources/fonts/font.TTF'))
         # --按钮
         self.choose_content_button = QPushButton('选择路径')
         self.choose_bg_button = QPushButton('选择路径')
@@ -125,11 +126,3 @@ class newyearCardGUI(QtWidgets.QWidget):
         if not filepath:
             return False
         return os.path.isfile(filepath)
-
-
-'''run'''
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    gui = newyearCardGUI()
-    gui.show()
-    sys.exit(app.exec_())

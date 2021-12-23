@@ -7,7 +7,6 @@ Author:
     Charles的皮卡丘
 '''
 import os
-import sys
 import time
 import random
 import configparser
