@@ -61,6 +61,7 @@ class pytools():
             'idcardquery': IDCardQuery,
             'portscanner': PortScanner,
             'emailsecurity': EmailSecurity,
+            'earthwallpaper': EarthWallpaper,
             'computersinger': ComputerSinger,
             'inquiryexpress': InquiryExpress,
             'idiomsolitaire': IdiomSolitaire,

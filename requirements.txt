@@ -14,3 +14,4 @@ IPy
 pillow
 openpyxl
 ctypes
+pywin32
