@@ -13,4 +13,3 @@ id_validator
 IPy
 pillow
 openpyxl
-ctypes
