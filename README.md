@@ -45,6 +45,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   coupletgenerator                   |     [click](https://mp.weixin.qq.com/s/L1gmiMJ-M8T-QgSeJckYEw)    |      [click](./pytools/modules/coupletgenerator)          |     春联生成器                    |
 |   translator                         |     [click](https://mp.weixin.qq.com/s/SWR-bUdqfpn3NxR5OgCYlg)    |      [click](./pytools/modules/translator)                |     翻译软件                      |
 |   desktoppet                         |     [click](https://mp.weixin.qq.com/s/4kOzdRXmrxzR88QcYYSFvQ)    |      [click](./pytools/modules/desktoppet)                |     桌面宠物                      |
+|   computersinger                     |     [click](https://mp.weixin.qq.com/s/-yT1NxAUTN8hzZs76qzqjQ)    |      [click](./pytools/modules/computersinger)            |     让电脑主板上的蜂鸣器哼歌      |
 
 
 # Coming Soon
@@ -52,16 +53,21 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   :----:                             |     :----:                                                        |      :----:                                                                            |     :----:                  |
 |   Control your computer by emails    |     [click](https://mp.weixin.qq.com/s/KnG-mncegaB35v5THAUJXQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ControlPCbyEmail)     |     邮件控制电脑            |
 |   Movie helper                       |     [click](https://mp.weixin.qq.com/s/VlwCyD99YBYhIbwG4rYN3A)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/MovieHelper)          |     电影小助手              |
-|   ComputerSinger                     |     [click](https://mp.weixin.qq.com/s/-yT1NxAUTN8hzZs76qzqjQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ComputerSinger)       |     电脑蜂鸣器哼歌          |
 |   HubbleSee                          |     [click](https://mp.weixin.qq.com/s/hJDcRHNHT1Zc0akctvWqsA)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/HubbleSee)            |     你生日那天的宇宙        |
 |   earthWallpaper                     |     [click](https://mp.weixin.qq.com/s/pDZpzzpd1g5bodtFdEROEg)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/earthWallpaper)       |     地球卫星壁纸            |
 
 
 # Install
+
+#### Preparation
+- [Nodejs](https://nodejs.org/en/): Since some of the tools depend on nodejs, e.g., translator, you should install the latest Nodejs if you want to use those tools.
+- [LAV Filters](http://files.1f0.de/lavf/LAVFilters-0.65.exe): If you want to use musicplayer or videoplayer in Windows, you have to install the decoder of DirectShow, such as LAV Filters.
+
 #### Pip install
 ```
 run "pip install pytools"
 ```
+
 #### Source code install
 ```sh
 (1) Offline

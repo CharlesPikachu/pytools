@@ -10,6 +10,7 @@ from .musicplayer import MusicPlayer
 from .idcardquery import IDCardQuery
 from .portscanner import PortScanner
 from .emailsecurity import EmailSecurity
+from .computersinger import ComputerSinger
 from .inquiryexpress import InquiryExpress
 from .idiomsolitaire import IdiomSolitaire
 from .succulentquery import SucculentQuery
