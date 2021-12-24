@@ -15,4 +15,3 @@ pillow
 openpyxl
 ctypes
 pywin32
-email
