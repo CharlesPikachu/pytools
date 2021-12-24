@@ -2,10 +2,10 @@
 
 
 ## 环境配置
--Linux or macOS or Windows
--Python3.6+
--The latests [Nodejs](https://nodejs.org/en/)
--[LAV Filters](http://files.1f0.de/lavf/LAVFilters-0.65.exe)
+- Linux or macOS or Windows
+- Python3.6+
+- The latests [Nodejs](https://nodejs.org/en/)
+- [LAV Filters](http://files.1f0.de/lavf/LAVFilters-0.65.exe)
 
 
 ## PIP安装(推荐)
