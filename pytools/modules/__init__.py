@@ -21,5 +21,6 @@ from .coupletgenerator import CoupletGenerator
 from .artsigngenerator import ArtSignGenerator
 from .naughtyconfession import NaughtyConfession
 from .luxunsentencesquery import LuxunSentencesQuery
+from .hubbleseeonbirthday import HubbleSeeOnBirthday
 from .newyearcardgenerator import NewYearCardGenerator
 from .trumptweetsgenerator import TrumpTweetsGenerator

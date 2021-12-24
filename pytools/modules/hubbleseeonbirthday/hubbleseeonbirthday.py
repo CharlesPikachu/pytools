@@ -1,6 +1,6 @@
 '''
 Function:
-    what-did-hubble-see-on-your-birthday
+    你生日那天的宇宙
 Author:
     Charles
 微信公众号:
@@ -8,7 +8,6 @@ Author:
 '''
 import io
 import os
-import sys
 import warnings
 import requests
 import threading
@@ -25,14 +24,17 @@ from requests.packages.urllib3.util.retry import Retry
 warnings.filterwarnings('ignore')
 
 
-'''what-did-hubble-see-on-your-birthday'''
+'''你生日那天的宇宙'''
 class HubbleSeeOnBirthday(QWidget):
+    tool_name = '你生日那天的宇宙'
     update_signal = pyqtSignal(dict, name='data')
-    def __init__(self, parent=None, **kwargs):
+    def __init__(self, parent=None, title='你生日那天的宇宙 —— Charles的皮卡丘', **kwargs):
         super(HubbleSeeOnBirthday, self).__init__(parent)
+        rootdir = os.path.split(os.path.abspath(__file__))[0]
+        self.rootdir = rootdir
         self.setFixedSize(700, 350)
-        self.setWindowTitle('你生日那天的宇宙-微信公众号:Charles的皮卡丘')
-        self.setWindowIcon(QIcon('resources/icon/icon.jpg'))
+        self.setWindowTitle(title)
+        self.setWindowIcon(QIcon(os.path.join(rootdir, 'resources/icon/icon.jpg')))
         # 定义组件
         # --label
         self.month_label = QLabel('出生月:')
@@ -40,7 +42,7 @@ class HubbleSeeOnBirthday(QWidget):
         self.show_label = QLabel()
         self.show_label.setScaledContents(True)
         self.show_label.setMaximumSize(400, 300)
-        self.showLabelImage(Image.open('resources/icon/icon.jpg'))
+        self.showLabelImage(Image.open(os.path.join(rootdir, 'resources/icon/icon.jpg')))
         # --显示介绍文字的text
         self.text_result = QTextEdit()
         # --日期选择下拉框
@@ -73,7 +75,7 @@ class HubbleSeeOnBirthday(QWidget):
         self.update_signal.connect(self.update)
         # 一些必要的变量
         self.is_querying = False
-        self.full_year_data = self.loadFullYearData('resources/hubble-birthdays-full-year.xlsx')
+        self.full_year_data = self.loadFullYearData(os.path.join(rootdir, 'resources/hubble-birthdays-full-year.xlsx'))
         self.data_for_save = None
     '''查询'''
     def query(self):
@@ -83,34 +85,34 @@ class HubbleSeeOnBirthday(QWidget):
             url = self.full_year_data.get(key)
             if url:
                 headers = {
-                            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-                            'Accept-Encoding': 'gzip, deflate, br',
-                            'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
-                            'Cache-Control': 'no-cache',
-                            'Connection': 'keep-alive',
-                            'Cookie': '_ga=GA1.2.1134605765.1585543076; _gid=GA1.2.319198058.1585543076; JSESSIONID=A5B6D1F64BECBF2ACBFC3F61D4FE8EB5',
-                            'Host': 'hubblesite.org',
-                            'Pragma': 'no-cache',
-                            'Sec-Fetch-Dest': 'document',
-                            'Sec-Fetch-Mode': 'navigate',
-                            'Sec-Fetch-Site': 'none',
-                            'Sec-Fetch-User': '?1',
-                            'Upgrade-Insecure-Requests': '1',
-                            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
-                        }
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+                    'Accept-Encoding': 'gzip, deflate, br',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cache-Control': 'no-cache',
+                    'Connection': 'keep-alive',
+                    'Cookie': '_ga=GA1.2.1134605765.1585543076; _gid=GA1.2.319198058.1585543076; JSESSIONID=A5B6D1F64BECBF2ACBFC3F61D4FE8EB5',
+                    'Host': 'hubblesite.org',
+                    'Pragma': 'no-cache',
+                    'Sec-Fetch-Dest': 'document',
+                    'Sec-Fetch-Mode': 'navigate',
+                    'Sec-Fetch-Site': 'none',
+                    'Sec-Fetch-User': '?1',
+                    'Upgrade-Insecure-Requests': '1',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+                }
                 # 因为经常请求失败, 所以加个try块
                 while True:
                     try:
-                        res = requests.get(url, headers=headers)
+                        response = requests.get(url, headers=headers)
                         break
                     except:
                         continue
-                html_root = etree.HTML(res.text)
+                html_root = etree.HTML(response.text)
                 html = html_root.xpath('//*[@id="main-content"]/section/section/div[1]/div/div/div[2]')[0].xpath('./p')
                 # 提取介绍
                 intro = []
                 for item in html:
-                    intro.append(item.xpath('text()')[0])
+                    intro.append(item.xpath('text()')[0].strip(' ').strip('\n').strip('\t').strip())
                 # 提取图片链接并下载
                 idx = -1
                 while True:
@@ -120,23 +122,12 @@ class HubbleSeeOnBirthday(QWidget):
                         break
                     idx -= 1
                 filename = 'tmp.%s' % image_url.split('.')[-1]
-                while True:
-                    try:
-                        f = open(filename, 'wb')
-                        session = requests.Session()
-                        retry = Retry(connect=10000, backoff_factor=0.5)
-                        adapter = HTTPAdapter(max_retries=retry)
-                        session.mount('http://', adapter)
-                        session.mount('https://', adapter)
-                        res = session.get(image_url, headers=headers, stream=True, verify=False)
-                        for chunk in res.iter_content(chunk_size=1024): f.write(chunk)
-                        f.close()
-                        break
-                    except:
-                        continue
+                response = requests.get(image_url)
+                fp = open(filename, 'wb')
+                fp.write(response.content)
                 data = {'date': key, 'intro': intro, 'image': Image.open(filename), 'ext': image_url.split('.')[-1]}
             else:
-                data = {'date': key, 'intro': ['地球上还不存在%s这个日期哦~' % key], 'image': Image.open('resources/icon/icon.jpg'), 'ext': 'jpg'}
+                data = {'date': key, 'intro': ['地球上还不存在%s这个日期哦~' % key], 'image': Image.open(os.path.join(self.rootdir, 'resources/icon/icon.jpg')), 'ext': 'jpg'}
             self.update_signal.emit(data)
             self.is_querying = False
     '''保存查询结果'''
@@ -177,11 +168,3 @@ class HubbleSeeOnBirthday(QWidget):
     '''显示介绍的文字'''
     def showIntroduction(self, intro):
         self.text_result.setText('\n\n'.join(intro))
-
-
-'''run'''
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    gui = HubbleSeeOnBirthday()
-    gui.show()
-    sys.exit(app.exec_())

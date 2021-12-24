@@ -68,6 +68,9 @@ package_data.update({
     'pytools.modules.luxunsentencesquery': ['resources/*'] 
 })
 package_data.update({
+    'pytools.modules.hubbleseeonbirthday': ['resources/hubble-birthdays-full-year.xlsx', 'resources/icon/*'] 
+})
+package_data.update({
     'pytools.modules.newyearcardgenerator': ['resources/bgimages/*', 'resources/contents/*', 'resources/fonts/*', 'resources/icon/*'] 
 })
 package_data.update({

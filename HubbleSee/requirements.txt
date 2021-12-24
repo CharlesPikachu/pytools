@@ -1,5 +1,0 @@
-lxml
-PyQt5
-openpyxl
-requests
-pillow

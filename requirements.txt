@@ -12,4 +12,5 @@ python-Levenshtein
 id_validator
 IPy
 pillow
+openpyxl
 ctypes
