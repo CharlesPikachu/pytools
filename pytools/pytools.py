@@ -36,7 +36,8 @@ class pytools():
         assert tool_type in self.supported_tools, 'unsupport tool_type %s...' % tool_type
         qt_tools = [
             'newyearcardgenerator', 'luxunsentencesquery', 'artsigngenerator', 'genderpredictor', 'musicplayer', 'qrcodegenerator', 'videoplayer',
-            'trumptweetsgenerator', 'coupletgenerator', 'idcardquery', 'idiomsolitaire', 'inquiryexpress', 'succulentquery', 'translator'
+            'trumptweetsgenerator', 'coupletgenerator', 'idcardquery', 'idiomsolitaire', 'inquiryexpress', 'succulentquery', 'translator',
+            'desktoppet'
         ]
         if tool_type in qt_tools:
             app = QApplication(sys.argv)
@@ -52,6 +53,7 @@ class pytools():
             'timer': Timer,
             'clock': Clock,
             'runcat': RunCat,
+            'desktoppet': DesktopPet,
             'translator': Translator,
             'calculator': Calculator,
             'videoplayer': VideoPlayer,
