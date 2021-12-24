@@ -72,6 +72,7 @@ class pytools():
             'qrcodegenerator': QRCodeGenerator,
             'coupletgenerator': CoupletGenerator,
             'artsigngenerator': ArtSignGenerator,
+            'controlpcbyemail': ControlPCbyEmail,
             'naughtyconfession': NaughtyConfession,
             'luxunsentencesquery': LuxunSentencesQuery,
             'hubbleseeonbirthday': HubbleSeeOnBirthday,

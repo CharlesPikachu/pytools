@@ -1,0 +1,13 @@
+{
+	"sender": {
+		"email": "xxx@qq.com"
+	},
+	"receiver": {
+		"email": "xxx@sina.com",
+		"password": "",
+		"pop3_server": "pop.sina.com",
+		"smtp_server": "smtp.sina.com",
+		"enable_ssl": false,
+		"port": 0
+	}
+}

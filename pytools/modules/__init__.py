@@ -21,6 +21,7 @@ from .genderpredictor import GenderPredictor
 from .qrcodegenerator import QRCodeGenerator
 from .coupletgenerator import CoupletGenerator
 from .artsigngenerator import ArtSignGenerator
+from .controlpcbyemail import ControlPCbyEmail
 from .naughtyconfession import NaughtyConfession
 from .luxunsentencesquery import LuxunSentencesQuery
 from .hubbleseeonbirthday import HubbleSeeOnBirthday

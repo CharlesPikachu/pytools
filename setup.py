@@ -62,6 +62,9 @@ package_data.update({
     'pytools.modules.artsigngenerator': ['resources/*'] 
 })
 package_data.update({
+    'pytools.modules.controlpcbyemail': ['resources/*'] 
+})
+package_data.update({
     'pytools.modules.naughtyconfession': ['resources/music/*', 'resources/font/*', 'resources/images/*'] 
 })
 package_data.update({

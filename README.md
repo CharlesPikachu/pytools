@@ -49,12 +49,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   hubbleseeonbirthday                |     [click](https://mp.weixin.qq.com/s/hJDcRHNHT1Zc0akctvWqsA)    |      [click](./pytools/modules/hubbleseeonbirthday)       |     你生日那天的宇宙              |
 |   earthwallpaper                     |     [click](https://mp.weixin.qq.com/s/pDZpzzpd1g5bodtFdEROEg)    |      [click](./pytools/modules/earthwallpaper)            |     动态更新地球壁纸              |
 |   moviehelper                        |     [click](https://mp.weixin.qq.com/s/VlwCyD99YBYhIbwG4rYN3A)    |      [click](./pytools/modules/moviehelper)               |     电影小助手                    |
-
-
-# Coming Soon
-|   Name                               |     Introduction                                                  |      Code                                                                              |     In Chinese              |
-|   :----:                             |     :----:                                                        |      :----:                                                                            |     :----:                  |
-|   Control your computer by emails    |     [click](https://mp.weixin.qq.com/s/KnG-mncegaB35v5THAUJXQ)    |      [click](https://github.com/CharlesPikachu/Tools/tree/master/ControlPCbyEmail)     |     邮件控制电脑            |
+|   controlpcbyemail                   |     [click](https://mp.weixin.qq.com/s/KnG-mncegaB35v5THAUJXQ)    |      [click](./pytools/modules/controlpcbyemail)          |     邮件控制电脑                  |
 
 
 # Install
