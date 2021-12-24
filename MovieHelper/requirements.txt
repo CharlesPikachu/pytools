@@ -1,2 +1,0 @@
-requesets
-bs4

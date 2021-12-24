@@ -56,6 +56,7 @@ class pytools():
             'desktoppet': DesktopPet,
             'translator': Translator,
             'calculator': Calculator,
+            'moviehelper': MovieHelper,
             'videoplayer': VideoPlayer,
             'musicplayer': MusicPlayer,
             'idcardquery': IDCardQuery,
