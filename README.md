@@ -60,7 +60,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 
 #### Pip install
 ```
-run "pip install pytools"
+run "pip install pikachupytools"
 ```
 
 #### Source code install
@@ -76,7 +76,7 @@ run "pip install git+https://github.com/CharlesPikachu/pytools.git@master"
 # Quick Start
 ```python
 import random
-from pikachupytools import pytools
+from pytools import pytools
 
 tool_client = pytools.pytools()
 all_supports = tool_client.getallsupported()
