@@ -3,13 +3,14 @@
 </div>
 <br />
 
+[![docs](https://img.shields.io/badge/docs-latest-blue)](https://readthedocs.org/projects/pikachupytools/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pikachupytools)](https://pypi.org/project/pikachupytools/)
 [![PyPI](https://img.shields.io/pypi/v/pikachupytools)](https://pypi.org/project/pikachupytools)
 [![license](https://img.shields.io/github/license/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/blob/master/LICENSE)
 [![issue resolution](https://isitmaintained.com/badge/resolution/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/issues)
 [![open issues](https://isitmaintained.com/badge/open/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/issues)
 
-Documents: still on the way
+Documents: https://readthedocs.org/projects/pikachupytools/
 
 
 # Pytools
