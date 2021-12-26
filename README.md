@@ -90,6 +90,13 @@ tool_client.execute(random.choice(list(all_supports.values())))
 ![img](./docs/screenshot.jpg)
 
 
+# Projects in Charles_pikachu
+- [Games](https://github.com/CharlesPikachu/Games): Create interesting games by pure python.
+- [DecryptLogin](https://github.com/CharlesPikachu/DecryptLogin): APIs for loginning some websites by using requests.
+- [Musicdl](https://github.com/CharlesPikachu/musicdl): A lightweight music downloader written by pure python.
+- [Videodl](https://github.com/CharlesPikachu/videodl): A lightweight video downloader written by pure python.
+
+
 # More
 #### WeChat Official Accounts
 *Charles_pikachu*  
