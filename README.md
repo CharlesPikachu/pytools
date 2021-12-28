@@ -95,6 +95,7 @@ tool_client.execute(random.choice(list(all_supports.values())))
 - [DecryptLogin](https://github.com/CharlesPikachu/DecryptLogin): APIs for loginning some websites by using requests.
 - [Musicdl](https://github.com/CharlesPikachu/musicdl): A lightweight music downloader written by pure python.
 - [Videodl](https://github.com/CharlesPikachu/videodl): A lightweight video downloader written by pure python.
+- [PikachuWeChat](https://github.com/CharlesPikachu/pikachuwechat): Play WeChat with itchat-uos.
 
 
 # More
