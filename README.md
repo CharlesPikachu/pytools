@@ -7,7 +7,7 @@
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pikachupytools)](https://pypi.org/project/pikachupytools/)
 [![PyPI](https://img.shields.io/pypi/v/pikachupytools)](https://pypi.org/project/pikachupytools)
 [![license](https://img.shields.io/github/license/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/blob/master/LICENSE)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/pikachupytools?style=flat-square)](https://pypi.org/project/pikachupytools/)
+[![PyPI - Downloads](https://pepy.tech/badge/pikachupytools)](https://pypi.org/project/pikachupytools/)
 [![issue resolution](https://isitmaintained.com/badge/resolution/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/issues)
 [![open issues](https://isitmaintained.com/badge/open/CharlesPikachu/pytools.svg)](https://github.com/CharlesPikachu/pytools/issues)
 
@@ -95,6 +95,7 @@ tool_client.execute(random.choice(list(all_supports.values())))
 - [DecryptLogin](https://github.com/CharlesPikachu/DecryptLogin): APIs for loginning some websites by using requests.
 - [Musicdl](https://github.com/CharlesPikachu/musicdl): A lightweight music downloader written by pure python.
 - [Videodl](https://github.com/CharlesPikachu/videodl): A lightweight video downloader written by pure python.
+- [Pytools](https://github.com/CharlesPikachu/pytools): Some useful tools written by pure python.
 - [PikachuWeChat](https://github.com/CharlesPikachu/pikachuwechat): Play WeChat with itchat-uos.
 
 
