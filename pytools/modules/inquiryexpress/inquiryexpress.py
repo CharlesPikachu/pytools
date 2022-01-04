@@ -55,7 +55,7 @@ class InquiryExpress(QWidget):
         # 获得快递公司信息
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36',
-            'Host': 'm.kuaidi100.com'
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
         }
         infos = []
         express_info = session.get(f'http://www.kuaidi100.com/autonumber/autoComNum?resultv2=1&text={number}', headers=headers).json()['auto'][0]
@@ -71,7 +71,9 @@ class InquiryExpress(QWidget):
             'token': '',
             'platform': 'MWWW',
         }
-        headers['Cookie'] = f'csrftoken=Rho5YwzYpY8Mhove9XuhD83akWBd2QV3S-bpBcc3OhA; _adadqeqwe1321312dasddocTitle=kuaidi100; _adadqeqwe1321312dasddocReferrer=; _adadqeqwe1321312dasddocHref=; WWWID=WWW325CDE0C596CC0AA6F456439F7220990; Hm_lvt_22ea01af58ba2be0fec7c11b25e88e6c=1640252974,1640252990,1640253001; Hm_lpvt_22ea01af58ba2be0fec7c11b25e88e6c={int(time.time())}'
+        response = session.get('https://m.kuaidi100.com/result.jsp')
+        cookie = requests.utils.dict_from_cookiejar(response.cookies)
+        headers['Cookie'] = f"csrftoken={cookie['csrftoken']}; WWWID={cookie['WWWID']}"
         response_json = session.post(url, headers=headers, data=data).json()
         express_data, infos = response_json['data'], []
         if ('name' in express_info) and express_info['name']:
