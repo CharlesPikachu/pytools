@@ -87,7 +87,7 @@ tool_client.execute(random.choice(list(all_supports.values())))
 
 
 # Screenshot
-![img](./docs/screenshot.jpg)
+![img](./docs/screenshot.gif)
 
 
 # Projects in Charles_pikachu
