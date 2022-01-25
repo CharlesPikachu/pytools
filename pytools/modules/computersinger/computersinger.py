@@ -9,7 +9,6 @@ Author:
 import os
 import sys
 import time
-import ctypes
 import threading
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
@@ -21,6 +20,7 @@ class ComputerSinger(QWidget):
     tool_name = '让电脑主板上的蜂鸣器哼歌'
     def __init__(self, parent=None, title='让电脑主板上的蜂鸣器哼歌 —— Charles的皮卡丘', **kwargs):
         super(ComputerSinger, self).__init__(parent)
+        import ctypes
         rootdir = os.path.split(os.path.abspath(__file__))[0]
         self.rootdir = rootdir
         self.setFixedSize(500, 100)

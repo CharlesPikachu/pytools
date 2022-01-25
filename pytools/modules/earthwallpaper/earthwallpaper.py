@@ -9,7 +9,6 @@ Author:
 import os
 import datetime
 import requests
-import win32gui, win32con, win32api
 
 
 '''动态更新地球壁纸'''
@@ -48,6 +47,7 @@ class EarthWallpaper():
             if flag: break
     '''换壁纸'''
     def setWallPaper(self, imagepath='download/cache_wallpaper.png'):
+        import win32gui, win32con, win32api
         keyex = win32api.RegOpenKeyEx(win32con.HKEY_CURRENT_USER, "Control Panel\\Desktop", 0, win32con.KEY_SET_VALUE)
         win32api.RegSetValueEx(keyex, "WallpaperStyle", 0, win32con.REG_SZ, "0")
         win32api.RegSetValueEx(keyex, "TileWallpaper", 0, win32con.REG_SZ, "0")
