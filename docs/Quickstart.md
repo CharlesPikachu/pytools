@@ -709,7 +709,7 @@ word2cmd_dict: 命令字典, 默认值
 #### 放烟花特效
 1.公众号文章链接 
 
-[点击查看]()
+[点击查看](https://mp.weixin.qq.com/s/wzz_7gKIt7iU-7kM_9o_pw)
 
 2.功能介绍
 

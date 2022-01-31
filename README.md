@@ -52,7 +52,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   earthwallpaper                     |     [click](https://mp.weixin.qq.com/s/pDZpzzpd1g5bodtFdEROEg)    |      [click](./pytools/modules/earthwallpaper)            |     动态更新地球壁纸              |
 |   moviehelper                        |     [click](https://mp.weixin.qq.com/s/VlwCyD99YBYhIbwG4rYN3A)    |      [click](./pytools/modules/moviehelper)               |     电影小助手                    |
 |   controlpcbyemail                   |     [click](https://mp.weixin.qq.com/s/KnG-mncegaB35v5THAUJXQ)    |      [click](./pytools/modules/controlpcbyemail)          |     邮件控制电脑                  |
-|   playfireworks                      |     [click]()                                                     |      [click](./pytools/modules/playfireworks)             |     放烟花特效                    |
+|   playfireworks                      |     [click](https://mp.weixin.qq.com/s/wzz_7gKIt7iU-7kM_9o_pw)    |      [click](./pytools/modules/playfireworks)             |     放烟花特效                    |
 
 
 # Install
