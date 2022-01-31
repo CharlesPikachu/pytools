@@ -10,6 +10,7 @@ from .videoplayer import VideoPlayer
 from .musicplayer import MusicPlayer
 from .idcardquery import IDCardQuery
 from .portscanner import PortScanner
+from .playfireworks import PlayFireworks
 from .emailsecurity import EmailSecurity
 from .earthwallpaper import EarthWallpaper
 from .computersinger import ComputerSinger

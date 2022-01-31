@@ -38,6 +38,9 @@ package_data.update({
     'pytools.modules.idcardquery': ['resources/*'] 
 })
 package_data.update({
+    'pytools.modules.playfireworks': ['resources/*'] 
+})
+package_data.update({
     'pytools.modules.computersinger': ['resources/icon.ico', 'resources/musicfiles/*'] 
 })
 package_data.update({

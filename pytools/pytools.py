@@ -61,6 +61,7 @@ class pytools():
             'musicplayer': MusicPlayer,
             'idcardquery': IDCardQuery,
             'portscanner': PortScanner,
+            'playfireworks': PlayFireworks,
             'emailsecurity': EmailSecurity,
             'earthwallpaper': EarthWallpaper,
             'computersinger': ComputerSinger,
