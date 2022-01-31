@@ -706,6 +706,28 @@ word2cmd_dict: 命令字典, 默认值
 }
 ```
 
+#### 放烟花特效
+1.公众号文章链接 
+
+[点击查看]()
+
+2.功能介绍
+
+实现放烟花特效。
+
+3.调用示例代码
+```python
+from pytools import pytools
+
+tool_client = pytools.pytools()
+tool_client.execute('playfireworks')
+```
+
+4.config中支持的参数
+```python
+暂无
+```
+
 
 ## 随机运行一个小程序
 写如下代码，保存并运行即可：
