@@ -685,24 +685,24 @@ tool_client.execute('controlpcbyemail')
 time_interval: 失败重复尝试次数, 默认值"5"
 options: 选项, 默认值
 {
-	"sender": {
-		"email": "xxx@qq.com"
-	},
-	"receiver": {
-		"email": "xxx@sina.com",
-		"password": "",
-		"pop3_server": "pop.sina.com",
-		"smtp_server": "smtp.sina.com",
-		"enable_ssl": false,
-		"port": 0,
+    "sender": {
+        "email": "xxx@qq.com"
+    },
+    "receiver": {
+        "email": "xxx@sina.com",
+        "password": "",
+        "pop3_server": "pop.sina.com",
+        "smtp_server": "smtp.sina.com",
+        "enable_ssl": false,
+        "port": 0,
 	}
 }
 word2cmd_dict: 命令字典, 默认值
 {
-	"关机": "shutdown -s -t 00",
-	"取消关机": "shutdown -a",
-	"锁屏": "rundll32.exe user32.dll,LockWorkStation",
-	"截屏": "screenshot",
+    "关机": "shutdown -s -t 00",
+    "取消关机": "shutdown -a",
+    "锁屏": "rundll32.exe user32.dll,LockWorkStation",
+    "截屏": "screenshot",
 }
 ```
 
@@ -750,8 +750,8 @@ tool_client.execute('arxivhelper', config={'time_interval': 3600*5, 'server_key'
 {
     time_interval: 每隔多少秒搜索一次arxiv，默认值为5*3600秒, 即5小时,
     server_key: server酱的key值，到http://sc.ftqq.com/3.version申请即可, 默认值为None,
-	keywords_list: 我们感兴趣的论文关键字列表, 默认值为['continual learning'],
-	history_filename: 缓存文件, 默认值为'cache.pkl',
+    keywords_list: 我们感兴趣的论文关键字列表, 默认值为['continual learning'],
+    history_filename: 缓存文件, 默认值为'cache.pkl',
 }
 ```
 
