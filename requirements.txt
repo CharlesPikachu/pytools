@@ -13,3 +13,5 @@ id_validator
 IPy
 pillow
 openpyxl
+click
+beautifulsoup4

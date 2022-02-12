@@ -694,7 +694,7 @@ options: 选项, 默认值
 		"pop3_server": "pop.sina.com",
 		"smtp_server": "smtp.sina.com",
 		"enable_ssl": false,
-		"port": 0
+		"port": 0,
 	}
 }
 word2cmd_dict: 命令字典, 默认值
@@ -702,7 +702,7 @@ word2cmd_dict: 命令字典, 默认值
 	"关机": "shutdown -s -t 00",
 	"取消关机": "shutdown -a",
 	"锁屏": "rundll32.exe user32.dll,LockWorkStation",
-	"截屏": "screenshot"
+	"截屏": "screenshot",
 }
 ```
 
@@ -726,6 +726,33 @@ tool_client.execute('playfireworks')
 4.config中支持的参数
 ```python
 暂无
+```
+
+#### Arxiv小助手
+1.公众号文章链接 
+
+[点击查看](https://mp.weixin.qq.com/s/XypPxlWmzbRoEEEhusEXJA)
+
+2.功能介绍
+
+定时给自己推送arxiv上自己感兴趣的论文。
+
+3.调用示例代码
+```python
+from pytools import pytools
+
+tool_client = pytools.pytools()
+tool_client.execute('arxivhelper', config={'time_interval': 3600*5, 'server_key': 'SCT118858TwORPoXsvuaPP1Cri50qkUpOf', 'keywords_list': ['continual learning']})
+```
+
+4.config中支持的参数
+```python
+{
+    time_interval: 每隔多少秒搜索一次arxiv，默认值为5*3600秒, 即5小时,
+    server_key: server酱的key值，到http://sc.ftqq.com/3.version申请即可, 默认值为None,
+	keywords_list: 我们感兴趣的论文关键字列表, 默认值为['continual learning'],
+	history_filename: 缓存文件, 默认值为'cache.pkl',
+}
 ```
 
 

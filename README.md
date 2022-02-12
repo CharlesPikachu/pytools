@@ -53,7 +53,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   moviehelper                        |     [click](https://mp.weixin.qq.com/s/VlwCyD99YBYhIbwG4rYN3A)    |      [click](./pytools/modules/moviehelper)               |     电影小助手                    |
 |   controlpcbyemail                   |     [click](https://mp.weixin.qq.com/s/KnG-mncegaB35v5THAUJXQ)    |      [click](./pytools/modules/controlpcbyemail)          |     邮件控制电脑                  |
 |   playfireworks                      |     [click](https://mp.weixin.qq.com/s/wzz_7gKIt7iU-7kM_9o_pw)    |      [click](./pytools/modules/playfireworks)             |     放烟花特效                    |
-|   arxivhelper                        |     [click]()                                                     |      [click](./pytools/modules/arxivhelper)               |     Arxiv小助手                   |
+|   arxivhelper                        |     [click](https://mp.weixin.qq.com/s/XypPxlWmzbRoEEEhusEXJA)    |      [click](./pytools/modules/arxivhelper)               |     Arxiv小助手                   |
 
 
 # Install
