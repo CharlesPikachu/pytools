@@ -5,6 +5,7 @@ from .runcat import RunCat
 from .desktoppet import DesktopPet
 from .translator import Translator
 from .calculator import Calculator
+from .arxivhelper import ArxivHelper
 from .moviehelper import MovieHelper
 from .videoplayer import VideoPlayer
 from .musicplayer import MusicPlayer
