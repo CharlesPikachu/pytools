@@ -565,7 +565,7 @@ tool_client.execute('desktoppet')
 {
     ACTION_DISTRIBUTION: 连贯动作的图片索引, 默认值"[['1', '2', '3'], ['4', '5', '6', '7', '8', '9', '10', '11'], ...]",
     PET_ACTIONS_MAP: 宠物素材路径, 默认值"{'pet_1': ACTION_DISTRIBUTION}",
-	pet_type: 指定宠物类型, 支持'bingdwendwen', 'pikachu', 'fox', 'blackcat'和'whitecat',
+    pet_type: 指定宠物类型, 支持'bingdwendwen', 'pikachu', 'fox', 'blackcat'和'whitecat',
 }
 ```
 
