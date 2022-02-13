@@ -48,7 +48,6 @@ class DesktopPet(QWidget):
     def __init__(self, pet_type='pikachu', parent=None, **kwargs):
         super(DesktopPet, self).__init__(parent)
         self.cfg = Config()
-        self.pet_type = pet_type
         for key, value in kwargs.items():
             if hasattr(self.cfg, key): setattr(self.cfg, key, value)
         # 初始化
@@ -57,10 +56,10 @@ class DesktopPet(QWidget):
         self.setAttribute(Qt.WA_TranslucentBackground, True)
         self.repaint()
         # 导入宠物
+        if pet_type not in self.cfg.PET_ACTIONS_MAP: pet_type = None
         if pet_type is None:
             self.pet_images, iconpath = self.randomLoadPetImages()
         else:
-            assert pet_type in self.cfg.PET_ACTIONS_MAP
             for name in list(self.cfg.PET_ACTIONS_MAP.keys()):
                 if name != pet_type: self.cfg.PET_ACTIONS_MAP.pop(name)
             self.pet_images, iconpath = self.randomLoadPetImages()
