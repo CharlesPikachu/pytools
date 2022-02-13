@@ -80,7 +80,7 @@ class DesktopPet(QWidget):
         # 宠物拖拽时避免鼠标直接跳到左上角
         self.mouse_drag_pos = self.pos()
         # 显示
-        self.resize(128, 128)
+        self.resize(self.pet_images[0][0].size().width(), self.pet_images[0][0].size().height())
         self.randomPosition()
         self.show()
         # 宠物动画动作执行所需的一些变量
