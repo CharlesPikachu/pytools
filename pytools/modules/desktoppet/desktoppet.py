@@ -33,16 +33,22 @@ class Config():
         ['38', '39', '40', '41'],
         ['42', '43', '44', '45', '46']
     ]
-    PET_ACTIONS_MAP = {'pet_1': ACTION_DISTRIBUTION}
-    for i in range(2, 5): PET_ACTIONS_MAP.update({'pet_%s' % i: ACTION_DISTRIBUTION})
+    for name in ['pikachu', 'blackcat', 'whitecat', 'fox']:
+        PET_ACTIONS_MAP = {name: ACTION_DISTRIBUTION}
+    PET_ACTIONS_MAP['bingdwendwen'] = [
+        [str(i) for i in range(1, 41)],
+        [str(i) for i in range(41, 56)],
+        [str(i) for i in range(56, 91)],
+    ]
 
 
 '''桌面宠物'''
 class DesktopPet(QWidget):
     tool_name = '桌面宠物'
-    def __init__(self, parent=None, **kwargs):
+    def __init__(self, pet_type='pikachu', parent=None, **kwargs):
         super(DesktopPet, self).__init__(parent)
         self.cfg = Config()
+        self.pet_type = pet_type
         for key, value in kwargs.items():
             if hasattr(self.cfg, key): setattr(self.cfg, key, value)
         # 初始化
@@ -50,8 +56,14 @@ class DesktopPet(QWidget):
         self.setAutoFillBackground(False)
         self.setAttribute(Qt.WA_TranslucentBackground, True)
         self.repaint()
-        # 随机导入一个宠物
-        self.pet_images, iconpath = self.randomLoadPetImages()
+        # 导入宠物
+        if pet_type is None:
+            self.pet_images, iconpath = self.randomLoadPetImages()
+        else:
+            assert pet_type in self.cfg.PET_ACTIONS_MAP
+            for name in list(self.cfg.PET_ACTIONS_MAP.keys()):
+                if name != pet_type: self.cfg.PET_ACTIONS_MAP.pop(name)
+            self.pet_images, iconpath = self.randomLoadPetImages()
         # 设置退出选项
         quit_action = QAction('退出', self, triggered=self.quit)
         quit_action.setIcon(QIcon(iconpath))

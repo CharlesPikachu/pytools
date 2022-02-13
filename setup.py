@@ -23,7 +23,7 @@ package_data.update({
     'pytools.modules.runcat': ['resources/*'] 
 })
 package_data.update({
-    'pytools.modules.desktoppet': ['resources/pet_1/*', 'resources/pet_2/*', 'resources/pet_3/*', 'resources/pet_4/*'] 
+    'pytools.modules.desktoppet': ['resources/bingdwendwen/*', 'resources/blackcat/*', 'resources/fox/*', 'resources/pikachu/*', 'resources/whitecat/*'] 
 })
 package_data.update({
     'pytools.modules.translator': ['resources/*'] 
