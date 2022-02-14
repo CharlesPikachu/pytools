@@ -14,7 +14,6 @@ import email
 import poplib
 import smtplib
 import datetime
-from PIL import ImageGrab
 from email import encoders
 from email.header import Header
 from email.parser import Parser
@@ -219,6 +218,7 @@ class ControlPCbyEmail():
             return False
     '''截屏'''
     def screenshot(self, savename='screenshot.jpg'):
+        from PIL import ImageGrab
         img = ImageGrab.grab()
         img.save(savename)
         print('[INFO]: Get %s successfully...' % savename)

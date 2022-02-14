@@ -45,12 +45,12 @@ __  __            _
                 print('[Warning]: 您的输入有误, 请重新输入.')
     '''豆瓣电影查询'''
     def ___doubanInquiry(self):
-        douban_inquiry = douban.Douban()
+        douban_inquiry = Douban()
         flag = douban_inquiry.run()
         return flag
     '''泡饭影视电影资源搜索'''
     def __paofanSearch(self):
-        paofan_search = paofan.Paofan()
+        paofan_search = Paofan()
         flag = paofan_search.run()
         return flag
     '''打印必要的信息'''
