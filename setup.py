@@ -23,6 +23,9 @@ package_data.update({
     'pytools.modules.runcat': ['resources/*'] 
 })
 package_data.update({
+    'pytools.modules.ukrainemap': ['resources/*', 'icon.png'] 
+})
+package_data.update({
     'pytools.modules.desktoppet': ['resources/bingdwendwen/*', 'resources/blackcat/*', 'resources/fox/*', 'resources/pikachu/*', 'resources/whitecat/*'] 
 })
 package_data.update({
