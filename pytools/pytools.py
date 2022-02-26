@@ -37,7 +37,7 @@ class pytools():
         qt_tools = [
             'newyearcardgenerator', 'luxunsentencesquery', 'artsigngenerator', 'genderpredictor', 'musicplayer', 'qrcodegenerator', 'videoplayer',
             'trumptweetsgenerator', 'coupletgenerator', 'idcardquery', 'idiomsolitaire', 'inquiryexpress', 'succulentquery', 'translator',
-            'desktoppet', 'computersinger', 'hubbleseeonbirthday'
+            'desktoppet', 'computersinger', 'hubbleseeonbirthday', 'ukrainemap'
         ]
         if tool_type in qt_tools:
             app = QApplication(sys.argv)
@@ -53,6 +53,7 @@ class pytools():
             'timer': Timer,
             'clock': Clock,
             'runcat': RunCat,
+            'ukrainemap': UkraineMap,
             'desktoppet': DesktopPet,
             'translator': Translator,
             'calculator': Calculator,

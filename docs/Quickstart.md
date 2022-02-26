@@ -756,6 +756,30 @@ tool_client.execute('arxivhelper', config={'time_interval': 3600*5, 'server_key'
 }
 ```
 
+#### 乌克兰地图查询系统
+1.公众号文章链接 
+
+[点击查看]()
+
+2.功能介绍
+
+简单的乌克兰地图查询系统。
+
+3.调用示例代码
+```python
+from pytools import pytools
+
+tool_client = pytools.pytools()
+tool_client.execute('ukrainemap')
+```
+
+4.config中支持的参数
+```
+{
+    title: 软件显示的标题, 默认值"乌克兰地图查询系统 —— Charles的皮卡丘",
+}
+```
+
 
 ## 随机运行一个小程序
 写如下代码，保存并运行即可：
