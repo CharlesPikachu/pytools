@@ -759,7 +759,7 @@ tool_client.execute('arxivhelper', config={'time_interval': 3600*5, 'server_key'
 #### 乌克兰地图查询系统
 1.公众号文章链接 
 
-[点击查看]()
+[点击查看](https://mp.weixin.qq.com/s/zthIMtWqF7mJiIlXy1-bsA)
 
 2.功能介绍
 
