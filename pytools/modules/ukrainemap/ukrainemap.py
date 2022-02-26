@@ -125,6 +125,7 @@ class UkraineMap(QWidget):
             plt.plot(x_list, y_list, color='black')
         if show_label_image: 
             plt.savefig(os.path.join(self.rootdir, 'ukraine.png'))
+            plt.close()
             self.showLabelImage(os.path.join(self.rootdir, 'ukraine.png'))
     '''画乌克兰的某个州'''
     def drawstate(self, state_name='Kiev', color=None):
@@ -140,4 +141,5 @@ class UkraineMap(QWidget):
             plt.plot(x_list, y_list, color=color)
             plt.text(x_list[0], y_list[0], self.en2cn_states[state_name], size=10, color=color)
         plt.savefig(os.path.join(self.rootdir, f'{state_name}.png'))
+        plt.close()
         self.showLabelImage(os.path.join(self.rootdir, f'{state_name}.png'))
