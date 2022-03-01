@@ -94,13 +94,13 @@ class SpeechRecognition():
             pygame.mixer.music.load(audiopath)
             pygame.mixer.music.play()
             while pygame.mixer.music.get_busy():
-                time.sleep(5)
+                time.sleep(0.5)
         else:
             pygame.mixer.init()
             pygame.mixer.music.load(audiopath)
             pygame.mixer.music.play()
             while pygame.mixer.music.get_busy():
-                time.sleep(5)
+                time.sleep(0.5)
 
 
 '''桌面宠物'''
