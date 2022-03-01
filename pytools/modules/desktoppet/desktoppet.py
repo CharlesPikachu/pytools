@@ -8,7 +8,10 @@ Author:
 '''
 import os
 import sys
+import time
 import random
+import requests
+import threading
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -33,13 +36,68 @@ class Config():
         ['38', '39', '40', '41'],
         ['42', '43', '44', '45', '46']
     ]
+    PET_ACTIONS_MAP = dict()
     for name in ['pikachu', 'blackcat', 'whitecat', 'fox']:
-        PET_ACTIONS_MAP = {name: ACTION_DISTRIBUTION}
+        PET_ACTIONS_MAP[name] = ACTION_DISTRIBUTION
     PET_ACTIONS_MAP['bingdwendwen'] = [
-        [str(i) for i in range(1, 41)],
+        [str(i) for i in range(1, 41, 8)],
         [str(i) for i in range(41, 56)],
         [str(i) for i in range(56, 91)],
     ]
+    BAIDU_KEYS = random.choice([
+        ['25419425', 'fct6UMiQMLsp53MqXzp7AbKQ', 'p3wU9nPnfR7iBz2kM25sikN2ms0y84T3'],
+        ['24941009', '2c5AnnNaQKOIcTrLDTuY41vv', 'HOYo7BunbFtt88Z0ALFZcFSQ4ZVyIgiZ'],
+        ['11403041', 'swB03t9EbokK03htGsg0PKYe', 'XX20l47se2tSGmet8NihkHQLIjTIHUyy'],
+    ])
+
+
+'''语音识别模块'''
+class SpeechRecognition():
+    def __init__(self, app_id, api_key, secret_key, **kwargs):
+        from aip import AipSpeech
+        self.aipspeech_api = AipSpeech(app_id, api_key, secret_key)
+        self.speech_path = kwargs.get('speech_path', 'recording.wav')
+        assert self.speech_path.endswith('.wav'), 'only support audio with wav format'
+    '''录音'''
+    def record(self, sample_rate=16000):
+        import speech_recognition as sr
+        rec = sr.Recognizer()
+        with sr.Microphone(sample_rate=sample_rate) as source:
+            audio = rec.listen(source)
+        with open(self.speech_path, 'wb') as fp:
+            fp.write(audio.get_wav_data())
+    '''识别'''
+    def recognition(self):
+        assert os.path.exists(self.speech_path)
+        with open(self.speech_path, 'rb') as fp:
+            content = fp.read()
+        result = self.aipspeech_api.asr(content, 'wav', 16000, {'dev_pid': 1536})
+        text = result['result'][0]
+        return text
+    '''合成并说话'''
+    def synthesisspeak(self, text=None, audiopath=None):
+        assert text is None or audiopath is None
+        import pygame
+        if audiopath is None:
+            audiopath = f'recording_{time.time()}.mp3'
+            result = self.aipspeech_api.synthesis(
+                text, 'zh', 1, 
+                {'spd': 4, 'vol': 5, 'per': 4}
+            )
+            if not isinstance(result, dict):
+                with open(audiopath, 'wb') as fp:
+                    fp.write(result)
+            pygame.mixer.init()
+            pygame.mixer.music.load(audiopath)
+            pygame.mixer.music.play()
+            while pygame.mixer.music.get_busy():
+                time.sleep(5)
+        else:
+            pygame.mixer.init()
+            pygame.mixer.music.load(audiopath)
+            pygame.mixer.music.play()
+            while pygame.mixer.music.get_busy():
+                time.sleep(5)
 
 
 '''桌面宠物'''
@@ -47,9 +105,12 @@ class DesktopPet(QWidget):
     tool_name = '桌面宠物'
     def __init__(self, pet_type='pikachu', parent=None, **kwargs):
         super(DesktopPet, self).__init__(parent)
+        self.pet_type = pet_type
         self.cfg = Config()
         for key, value in kwargs.items():
             if hasattr(self.cfg, key): setattr(self.cfg, key, value)
+        app_id, api_key, secret_key = self.cfg.BAIDU_KEYS
+        self.speech_api = SpeechRecognition(app_id, api_key, secret_key)
         # 初始化
         self.setWindowFlags(Qt.FramelessWindowHint|Qt.WindowStaysOnTopHint|Qt.SubWindow)
         self.setAutoFillBackground(False)
@@ -89,9 +150,52 @@ class DesktopPet(QWidget):
         self.action_pointer = 0
         self.action_max_len = 0
         # 每隔一段时间做个动作
-        self.timer = QTimer()
-        self.timer.timeout.connect(self.randomAct)
-        self.timer.start(500)
+        self.timer_act = QTimer()
+        self.timer_act.timeout.connect(self.randomAct)
+        self.timer_act.start(500)
+        # 每隔一段时间检测一次语音
+        self.timer_speech = QTimer()
+        self.timer_speech.timeout.connect(self.talk)
+        self.timer_speech.start(5000)
+        self.running_talk = False
+    '''对话功能实现'''
+    def talk(self):
+        if self.running_talk: return
+        self.running_talk = True
+        def _talk(self):
+            valid_names = {'pikachu': '皮卡丘', 'blackcat': '黑猫', 'whitecat': '白猫', 'fox': '狐狸'}
+            while True:
+                self.speech_api.record()
+                user_input = self.speech_api.recognition()
+                if valid_names[self.pet_type] in user_input: break
+                else: return
+            self.speech_api.synthesisspeak('你好呀, 主人')
+            while True:
+                self.speech_api.record()
+                user_input = self.speech_api.recognition()
+                if '再见' in user_input:
+                    self.speech_api.synthesisspeak('好的, 主人再见')
+                    self.running_talk = False
+                    break
+                else:
+                    reply = self.turing(user_input)
+                    self.speech_api.synthesisspeak(reply)
+        threading.Thread(target=lambda: _talk(self)).start()
+    '''图灵机器人API'''
+    def turing(self, inputs):
+        appkeys = [
+            'f0a5ab746c7d41c48a733cabff23fb6d', 'c4fae3a2f8394b73bcffdecbbb4c6ac6', '0ca694db371745668c28c6cb0a755587',
+            '7855ce1ebd654f31938505bb990616d4', '5945954988d24ed393f465aae9be71b9', '1a337b641da04c64aa7fd4849a5f713e',
+            'eb720a8970964f3f855d863d24406576', '1107d5601866433dba9599fac1bc0083', '70a315f07d324b3ea02cf21d13796605',
+            '45fa933f47bb45fb8e7746759ba9b24a', '2f1446eb0321804291b0a1e217c25bb5', '7f05e31d381143d9948109e75484d9d0',
+            '35ff2856b55e4a7f9eeb86e3437e23fe', '820c4a6ca4694063ab6002be1d1c63d3',
+        ]
+        while True:
+            url = 'http://www.tuling123.com/openapi/api?key=%s&info=%s'
+            response = requests.get(url % (random.choice(appkeys), inputs))
+            reply = response.json()['text']
+            if u'当天请求次数已用完' in reply: continue
+            return reply
     '''随机做一个动作'''
     def randomAct(self):
         if not self.is_running_action:
