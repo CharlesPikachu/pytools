@@ -68,12 +68,15 @@ class SpeechRecognition():
             fp.write(audio.get_wav_data())
     '''识别'''
     def recognition(self):
-        assert os.path.exists(self.speech_path)
-        with open(self.speech_path, 'rb') as fp:
-            content = fp.read()
-        result = self.aipspeech_api.asr(content, 'wav', 16000, {'dev_pid': 1536})
-        text = result['result'][0]
-        return text
+        try:
+            assert os.path.exists(self.speech_path)
+            with open(self.speech_path, 'rb') as fp:
+                content = fp.read()
+            result = self.aipspeech_api.asr(content, 'wav', 16000, {'dev_pid': 1536})
+            text = result['result'][0]
+            return text
+        except:
+            return None
     '''合成并说话'''
     def synthesisspeak(self, text=None, audiopath=None):
         assert text is None or audiopath is None
@@ -156,7 +159,7 @@ class DesktopPet(QWidget):
         # 每隔一段时间检测一次语音
         self.timer_speech = QTimer()
         self.timer_speech.timeout.connect(self.talk)
-        self.timer_speech.start(5000)
+        self.timer_speech.start(2000)
         self.running_talk = False
     '''对话功能实现'''
     def talk(self):
@@ -167,12 +170,14 @@ class DesktopPet(QWidget):
             while True:
                 self.speech_api.record()
                 user_input = self.speech_api.recognition()
+                if user_input is None: return
                 if valid_names[self.pet_type] in user_input: break
                 else: return
             self.speech_api.synthesisspeak('你好呀, 主人')
             while True:
                 self.speech_api.record()
                 user_input = self.speech_api.recognition()
+                if user_input is None: continue
                 if '再见' in user_input:
                     self.speech_api.synthesisspeak('好的, 主人再见')
                     self.running_talk = False
