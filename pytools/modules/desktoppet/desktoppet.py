@@ -166,7 +166,7 @@ class DesktopPet(QWidget):
         if self.running_talk: return
         self.running_talk = True
         def _talk(self):
-            valid_names = {'pikachu': '皮卡丘', 'blackcat': '黑猫', 'whitecat': '白猫', 'fox': '狐狸'}
+            valid_names = {'pikachu': '皮卡丘', 'blackcat': '黑猫', 'whitecat': '白猫', 'fox': '狐狸', 'bingdwendwen': '冰墩墩'}
             while True:
                 self.speech_api.record()
                 user_input = self.speech_api.recognition()
