@@ -9,7 +9,9 @@ Pytools中文文档
 .. toctree::
 	:maxdepth: 2
 	
+	State.md
 	Install.md
 	Quickstart.md
 	Changelog.md
+	Recommend.md
 	Author.md
