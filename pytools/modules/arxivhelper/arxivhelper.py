@@ -17,6 +17,7 @@ from bs4 import BeautifulSoup
 
 '''每天从arxiv获取自己感兴趣的论文'''
 class ArxivHelper():
+    tool_name = 'Arxiv小助手'
     def __init__(self, keywords_list=['continual learning'], history_filename='cache.pkl', time_interval=3600*5, server_key=None, **kwargs):
         self.history_filename = history_filename
         self.keywords_list = keywords_list
