@@ -56,6 +56,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   playfireworks                      |     [click](https://mp.weixin.qq.com/s/wzz_7gKIt7iU-7kM_9o_pw)    |      [click](./pytools/modules/playfireworks)             |     放烟花特效                    |
 |   arxivhelper                        |     [click](https://mp.weixin.qq.com/s/XypPxlWmzbRoEEEhusEXJA)    |      [click](./pytools/modules/arxivhelper)               |     Arxiv小助手                   |
 |   ukrainemap                         |     [click](https://mp.weixin.qq.com/s/zthIMtWqF7mJiIlXy1-bsA)    |      [click](./pytools/modules/ukrainemap)                |     乌克兰地图查询系统            |
+|   sovietgenerator                    |     [click]()                                                     |      [click](./pytools/modules/sovietgenerator)           |     苏联笑话生成器                |
 
 
 # Install

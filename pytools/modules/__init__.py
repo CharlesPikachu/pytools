@@ -20,6 +20,7 @@ from .inquiryexpress import InquiryExpress
 from .idiomsolitaire import IdiomSolitaire
 from .succulentquery import SucculentQuery
 from .iplocationquery import IPLocationQuery
+from .sovietgenerator import SovietGenerator
 from .genderpredictor import GenderPredictor
 from .qrcodegenerator import QRCodeGenerator
 from .coupletgenerator import CoupletGenerator

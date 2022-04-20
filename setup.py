@@ -85,6 +85,9 @@ package_data.update({
 package_data.update({
     'pytools.modules.trumptweetsgenerator': ['resources/*'] 
 })
+package_data.update({
+    'pytools.modules.sovietgenerator': ['resources/*'] 
+})
 
 
 '''setup'''
