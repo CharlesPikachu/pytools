@@ -872,6 +872,33 @@ tool_client.execute('ukrainemap')
 }
 ```
 
+#### 苏联笑话生成器
+
+**1.公众号文章链接** 
+
+[点击查看](https://mp.weixin.qq.com/s/PUTJxDLpCVRSaUzvarizEQ)
+
+**2.功能介绍**
+
+简单的苏联笑话生成器。
+
+**3.调用示例代码**
+
+```python
+from pytools import pytools
+
+tool_client = pytools.pytools()
+tool_client.execute('sovietgenerator')
+```
+
+**4.config中支持的参数**
+
+```
+{
+    title: 软件显示的标题, 默认值"苏联笑话生成器 —— Charles的皮卡丘",
+}
+```
+
 
 ## 随机运行一个小程序
 
