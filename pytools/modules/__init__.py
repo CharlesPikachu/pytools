@@ -27,6 +27,7 @@ from .coupletgenerator import CoupletGenerator
 from .artsigngenerator import ArtSignGenerator
 from .controlpcbyemail import ControlPCbyEmail
 from .naughtyconfession import NaughtyConfession
+from .goodgoodgenerator import GoodGoodGenerator
 from .luxunsentencesquery import LuxunSentencesQuery
 from .hubbleseeonbirthday import HubbleSeeOnBirthday
 from .newyearcardgenerator import NewYearCardGenerator

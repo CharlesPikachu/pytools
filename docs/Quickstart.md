@@ -899,6 +899,33 @@ tool_client.execute('sovietgenerator')
 }
 ```
 
+#### 稳中向好生成器
+
+**1.公众号文章链接** 
+
+[点击查看]()
+
+**2.功能介绍**
+
+简单的稳中向好生成器。
+
+**3.调用示例代码**
+
+```python
+from pytools import pytools
+
+tool_client = pytools.pytools()
+tool_client.execute('goodgoodgenerator')
+```
+
+**4.config中支持的参数**
+
+```
+{
+    title: 软件显示的标题, 默认值"稳中向好生成器 —— Charles的皮卡丘",
+}
+```
+
 
 ## 随机运行一个小程序
 

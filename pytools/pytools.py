@@ -30,7 +30,7 @@ class pytools():
         qt_tools = [
             'newyearcardgenerator', 'luxunsentencesquery', 'artsigngenerator', 'genderpredictor', 'musicplayer', 'qrcodegenerator', 'videoplayer',
             'trumptweetsgenerator', 'coupletgenerator', 'idcardquery', 'idiomsolitaire', 'inquiryexpress', 'succulentquery', 'translator',
-            'desktoppet', 'computersinger', 'hubbleseeonbirthday', 'ukrainemap', 'sovietgenerator'
+            'desktoppet', 'computersinger', 'hubbleseeonbirthday', 'ukrainemap', 'sovietgenerator', 'goodgoodgenerator'
         ]
         if tool_type in qt_tools:
             app = QApplication(sys.argv)
@@ -51,6 +51,7 @@ class pytools():
             'iplocationquery': IPLocationQuery, 'genderpredictor': GenderPredictor, 'qrcodegenerator': QRCodeGenerator, 'coupletgenerator': CoupletGenerator,
             'artsigngenerator': ArtSignGenerator, 'controlpcbyemail': ControlPCbyEmail, 'naughtyconfession': NaughtyConfession, 'luxunsentencesquery': LuxunSentencesQuery,
             'hubbleseeonbirthday': HubbleSeeOnBirthday, 'newyearcardgenerator': NewYearCardGenerator, 'trumptweetsgenerator': TrumpTweetsGenerator, 'sovietgenerator': SovietGenerator,
+            'goodgoodgenerator': GoodGoodGenerator,
         }
         return supported_tools
     '''获得所有支持的tools信息'''
