@@ -88,6 +88,9 @@ package_data.update({
 package_data.update({
     'pytools.modules.sovietgenerator': ['resources/*'] 
 })
+package_data.update({
+    'pytools.modules.goodgoodgenerator': ['resources/*'] 
+})
 
 
 '''setup'''
