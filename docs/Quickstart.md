@@ -903,7 +903,7 @@ tool_client.execute('sovietgenerator')
 
 **1.公众号文章链接** 
 
-[点击查看]()
+[点击查看](https://mp.weixin.qq.com/s/mH9LyIdHe1uX2E3oAjlIoQ)
 
 **2.功能介绍**
 
