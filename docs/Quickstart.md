@@ -926,6 +926,33 @@ tool_client.execute('goodgoodgenerator')
 }
 ```
 
+#### 天眼查
+
+**1.公众号文章链接** 
+
+[点击查看]()
+
+**2.功能介绍**
+
+天眼查GUI版本。
+
+**3.调用示例代码**
+
+```python
+from pytools import pytools
+
+tool_client = pytools.pytools()
+tool_client.execute('tianyancha')
+```
+
+**4.config中支持的参数**
+
+```
+{
+    title: 软件显示的标题, 默认值"天眼查 —— Charles的皮卡丘",
+}
+```
+
 
 ## 随机运行一个小程序
 

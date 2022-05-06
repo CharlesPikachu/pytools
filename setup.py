@@ -91,6 +91,9 @@ package_data.update({
 package_data.update({
     'pytools.modules.goodgoodgenerator': ['resources/*'] 
 })
+package_data.update({
+    'pytools.modules.tianyancha': ['resources/*'] 
+})
 
 
 '''setup'''
