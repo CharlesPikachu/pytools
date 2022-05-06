@@ -60,7 +60,7 @@ class Tianyancha(QWidget):
         # 基本信息提取
         company_info = {'未查询到该公司相关的信息': ''}
         if data:
-            company = data['companyList'][0]
+            company, brand_and_agency = data['companyList'][0], {}
             for item in data['brandAndAgencyList']:
                 if item['graphId'] == company['id']:
                     brand_and_agency = item
