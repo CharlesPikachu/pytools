@@ -58,7 +58,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   ukrainemap                         |     [click](https://mp.weixin.qq.com/s/zthIMtWqF7mJiIlXy1-bsA)    |      [click](./pytools/modules/ukrainemap)                |     乌克兰地图查询系统            |
 |   sovietgenerator                    |     [click](https://mp.weixin.qq.com/s/PUTJxDLpCVRSaUzvarizEQ)    |      [click](./pytools/modules/sovietgenerator)           |     苏联笑话生成器                |
 |   goodgoodgenerator                  |     [click](https://mp.weixin.qq.com/s/mH9LyIdHe1uX2E3oAjlIoQ)    |      [click](./pytools/modules/goodgoodgenerator)         |     稳中向好生成器                |
-|   tianyancha                         |     [click]()                                                     |      [click](./pytools/modules/tianyancha)                |     天眼查                        |
+|   tianyancha                         |     [click](https://mp.weixin.qq.com/s/IpaOCq1600JyIf9QWieoTQ)    |      [click](./pytools/modules/tianyancha)                |     天眼查                        |
 
 
 # Install

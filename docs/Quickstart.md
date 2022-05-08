@@ -930,7 +930,7 @@ tool_client.execute('goodgoodgenerator')
 
 **1.公众号文章链接** 
 
-[点击查看]()
+[点击查看](https://mp.weixin.qq.com/s/IpaOCq1600JyIf9QWieoTQ)
 
 **2.功能介绍**
 
