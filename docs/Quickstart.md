@@ -953,6 +953,33 @@ tool_client.execute('tianyancha')
 }
 ```
 
+#### 盗取浏览器里的账号密码
+
+**1.公众号文章链接** 
+
+[点击查看]()
+
+**2.功能介绍**
+
+盗取浏览器里的账号密码。
+
+**3.调用示例代码**
+
+```python
+from pytools import pytools
+
+tool_client = pytools.pytools()
+tool_client.execute('decryptbrowser')
+```
+
+**4.config中支持的参数**
+
+```
+{
+    savename: 保存盗取的账号密码的文件名, 默认值为"results.csv",
+}
+```
+
 
 ## 随机运行一个小程序
 

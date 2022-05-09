@@ -15,6 +15,7 @@ from .idcardquery import IDCardQuery
 from .portscanner import PortScanner
 from .playfireworks import PlayFireworks
 from .emailsecurity import EmailSecurity
+from .decryptbrowser import DecryptBrowser
 from .earthwallpaper import EarthWallpaper
 from .computersinger import ComputerSinger
 from .inquiryexpress import InquiryExpress
