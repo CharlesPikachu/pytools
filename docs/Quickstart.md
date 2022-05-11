@@ -980,6 +980,35 @@ tool_client.execute('decryptbrowser')
 }
 ```
 
+#### 国内访问Github一键加速脚本
+
+**1.公众号文章链接** 
+
+[点击查看]()
+
+**2.功能介绍**
+
+国内访问Github一键加速脚本。
+
+**3.调用示例代码**
+
+```python
+from pytools import pytools
+
+tool_client = pytools.pytools()
+tool_client.execute('githubacceleration')
+```
+
+**4.config中支持的参数**
+
+```
+{
+    domains: Github相关的域名列表, 默认为"None", 即自动生成, 
+	hosts_path: 需要修改的hosts文件路径, 默认为"None", 即自动生成, 
+	proxies: 抓取域名对应的IP地址时使用的代理,
+}
+```
+
 
 ## 随机运行一个小程序
 

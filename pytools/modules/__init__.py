@@ -30,6 +30,7 @@ from .artsigngenerator import ArtSignGenerator
 from .controlpcbyemail import ControlPCbyEmail
 from .naughtyconfession import NaughtyConfession
 from .goodgoodgenerator import GoodGoodGenerator
+from .githubacceleration import GithubAcceleration
 from .luxunsentencesquery import LuxunSentencesQuery
 from .hubbleseeonbirthday import HubbleSeeOnBirthday
 from .newyearcardgenerator import NewYearCardGenerator

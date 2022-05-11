@@ -60,6 +60,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   goodgoodgenerator                  |     [click](https://mp.weixin.qq.com/s/mH9LyIdHe1uX2E3oAjlIoQ)    |      [click](./pytools/modules/goodgoodgenerator)         |     稳中向好生成器                |
 |   tianyancha                         |     [click](https://mp.weixin.qq.com/s/IpaOCq1600JyIf9QWieoTQ)    |      [click](./pytools/modules/tianyancha)                |     天眼查                        |
 |   decryptbrowser                     |     [click](https://mp.weixin.qq.com/s/sotiVBWrFxcyYAgdRJ5ydA)    |      [click](./pytools/modules/decryptbrowser)            |     盗取浏览器里的账号密码        |
+|   githubacceleration                 |     [click]()                                                     |      [click](./pytools/modules/githubacceleration)        |     国内访问Github一键加速脚本    |
 
 
 # Install
