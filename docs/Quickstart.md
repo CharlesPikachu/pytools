@@ -984,7 +984,7 @@ tool_client.execute('decryptbrowser')
 
 **1.公众号文章链接** 
 
-[点击查看]()
+[点击查看](https://mp.weixin.qq.com/s/OEWi5y_AbM1jE526LCp4aw)
 
 **2.功能介绍**
 
