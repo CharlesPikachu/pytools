@@ -61,6 +61,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   tianyancha                         |     [click](https://mp.weixin.qq.com/s/IpaOCq1600JyIf9QWieoTQ)    |      [click](./pytools/modules/tianyancha)                |     天眼查                        |
 |   decryptbrowser                     |     [click](https://mp.weixin.qq.com/s/sotiVBWrFxcyYAgdRJ5ydA)    |      [click](./pytools/modules/decryptbrowser)            |     盗取浏览器里的账号密码        |
 |   githubacceleration                 |     [click](https://mp.weixin.qq.com/s/OEWi5y_AbM1jE526LCp4aw)    |      [click](./pytools/modules/githubacceleration)        |     国内访问Github一键加速脚本    |
+|   modifyfoldericon                   |     [click]()                                                     |      [click](./pytools/modules/modifyfoldericon)          |     文件夹图标批量修改            |
 
 
 # Install

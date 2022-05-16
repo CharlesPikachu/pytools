@@ -28,6 +28,7 @@ from .qrcodegenerator import QRCodeGenerator
 from .coupletgenerator import CoupletGenerator
 from .artsigngenerator import ArtSignGenerator
 from .controlpcbyemail import ControlPCbyEmail
+from .modifyfoldericon import ModifyFolderICON
 from .naughtyconfession import NaughtyConfession
 from .goodgoodgenerator import GoodGoodGenerator
 from .githubacceleration import GithubAcceleration

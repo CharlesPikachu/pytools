@@ -52,6 +52,7 @@ class pytools():
             'artsigngenerator': ArtSignGenerator, 'controlpcbyemail': ControlPCbyEmail, 'naughtyconfession': NaughtyConfession, 'luxunsentencesquery': LuxunSentencesQuery,
             'hubbleseeonbirthday': HubbleSeeOnBirthday, 'newyearcardgenerator': NewYearCardGenerator, 'trumptweetsgenerator': TrumpTweetsGenerator, 'sovietgenerator': SovietGenerator,
             'goodgoodgenerator': GoodGoodGenerator, 'tianyancha': Tianyancha, 'decryptbrowser': DecryptBrowser, 'githubacceleration': GithubAcceleration,
+            'modifyfoldericon': ModifyFolderICON,
         }
         return supported_tools
     '''获得所有支持的tools信息'''

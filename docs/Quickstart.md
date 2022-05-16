@@ -1009,6 +1009,33 @@ tool_client.execute('githubacceleration')
 }
 ```
 
+#### 文件夹图标批量修改
+
+**1.公众号文章链接** 
+
+[点击查看]()
+
+**2.功能介绍**
+
+文件夹图标批量修改。
+
+**3.调用示例代码**
+
+```python
+from pytools import pytools
+
+tool_client = pytools.pytools()
+tool_client.execute('modifyfoldericon', config={'icon_path': r'D:\icon.ico'})
+```
+
+**4.config中支持的参数**
+
+```
+{
+    icon_path: 目标图标路径, 
+}
+```
+
 
 ## 随机运行一个小程序
 
