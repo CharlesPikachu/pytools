@@ -1004,8 +1004,8 @@ tool_client.execute('githubacceleration')
 ```
 {
     domains: Github相关的域名列表, 默认为"None", 即自动生成, 
-	hosts_path: 需要修改的hosts文件路径, 默认为"None", 即自动生成, 
-	proxies: 抓取域名对应的IP地址时使用的代理,
+    hosts_path: 需要修改的hosts文件路径, 默认为"None", 即自动生成, 
+    proxies: 抓取域名对应的IP地址时使用的代理,
 }
 ```
 
@@ -1013,7 +1013,7 @@ tool_client.execute('githubacceleration')
 
 **1.公众号文章链接** 
 
-[点击查看]()
+[点击查看](https://mp.weixin.qq.com/s/40QlSkwQ-ezpeDiPWlkUAg)
 
 **2.功能介绍**
 
