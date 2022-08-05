@@ -12,6 +12,7 @@ import stat
 
 '''文件夹图标批量修改'''
 class ModifyFolderICON():
+    tool_name = '文件夹图标批量修改'
     def __init__(self, icon_path, **kwargs):
         assert os.path.exists(icon_path)
         self.icon_path = icon_path
