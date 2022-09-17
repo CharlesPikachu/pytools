@@ -2,6 +2,7 @@
 from .timer import Timer
 from .clock import Clock
 from .runcat import RunCat
+from .sheepsheep import SheepSheep
 from .tianyancha import Tianyancha
 from .ukrainemap import UkraineMap
 from .desktoppet import DesktopPet

@@ -1036,6 +1036,33 @@ tool_client.execute('modifyfoldericon', config={'icon_path': r'D:\icon.ico'})
 }
 ```
 
+#### "羊了个羊"小助手
+
+**1.公众号文章链接** 
+
+[点击查看]()
+
+**2.功能介绍**
+
+"羊了个羊"小助手。
+
+**3.调用示例代码**
+
+```python
+from pytools import pytools
+​
+tool_client = pytools.pytools()
+tool_client.execute('sheepsheep', {'user_t': 'xxx'})
+```
+
+**4.config中支持的参数**
+
+```
+{
+    user_t: 每个用户特有的t值, 需要自己抓包获取, 
+}
+```
+
 
 ## 随机运行一个小程序
 
