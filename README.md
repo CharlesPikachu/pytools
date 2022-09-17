@@ -62,7 +62,7 @@ You can star this repository to keep track of the project if it's helpful for yo
 |   decryptbrowser                     |     [click](https://mp.weixin.qq.com/s/sotiVBWrFxcyYAgdRJ5ydA)    |      [click](./pytools/modules/decryptbrowser)            |     盗取浏览器里的账号密码        |
 |   githubacceleration                 |     [click](https://mp.weixin.qq.com/s/OEWi5y_AbM1jE526LCp4aw)    |      [click](./pytools/modules/githubacceleration)        |     国内访问Github一键加速脚本    |
 |   modifyfoldericon                   |     [click](https://mp.weixin.qq.com/s/40QlSkwQ-ezpeDiPWlkUAg)    |      [click](./pytools/modules/modifyfoldericon)          |     文件夹图标批量修改            |
-|   sheepsheep                         |     [click]()                                                     |      [click](./pytools/modules/sheepsheep)                |     "羊了个羊"小助手              |
+|   sheepsheep                         |     [click](https://mp.weixin.qq.com/s/Kj0s67IaNzU9s0ywAmNayg)    |      [click](./pytools/modules/sheepsheep)                |     "羊了个羊"小助手              |
 
 
 # Install

@@ -1040,7 +1040,7 @@ tool_client.execute('modifyfoldericon', config={'icon_path': r'D:\icon.ico'})
 
 **1.公众号文章链接** 
 
-[点击查看]()
+[点击查看](https://mp.weixin.qq.com/s/Kj0s67IaNzU9s0ywAmNayg)
 
 **2.功能介绍**
 
