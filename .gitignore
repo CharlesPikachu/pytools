@@ -102,4 +102,39 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Poetry
+# Do not ignore poetry.lock - it should be committed
+dist/
+*.egg-info/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Claude
+.claude/*
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+pytest_cache/
+.tox/
+
+# Build artifacts
+build/
+*.pyc
+*.pyo
+__pycache__/
 
